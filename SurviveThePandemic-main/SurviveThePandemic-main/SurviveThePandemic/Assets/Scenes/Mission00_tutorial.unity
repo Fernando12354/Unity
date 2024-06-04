@@ -1543,7 +1543,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Renaudar
+  m_text: Reanudar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a1d0f93b10b3b3499a14f579a00ce84, type: 2}
   m_sharedMaterial: {fileID: -8619156991914698464, guid: 1a1d0f93b10b3b3499a14f579a00ce84, type: 2}
@@ -2442,19 +2442,19 @@ MonoBehaviour:
   contenedorTexto: {fileID: 1892152004}
   llamadas:
   - caller: "Mam\xE1"
-    answer: Steven
+    answer: Alex
     dialogos:
-    - talker: Steven
+    - talker: Alex
       text: "Hola mam\xE1, \xBFTodo bien?"
     - talker: "Mam\xE1"
-      text: "\xA1Steven! \xBFYa viste las noticias? \xA1LA OMS ACABA DE DECLARAR
-        PANDEMIA MUNDIAL POR UN VIRUS MUY EXTRA\xD1O Y PELIGROSO!\r"
-    - talker: Steven
+      text: "\xA1Alex! \xBFYa viste las noticias? \xA1LA OMS ACABA DE DECLARAR PANDEMIA
+        MUNDIAL POR UN VIRUS MUY EXTRA\xD1O Y PELIGROSO!\r"
+    - talker: Alex
       text: "\xBF\xA1Qu\xE9!? \xA1No sabia nada de eso!\r"
     - talker: "Mam\xE1"
       text: "Deber\xE1s quedarte en casa lo m\xE1ximo posible. \n\xA1As\xED que tienes
         que ir por v\xEDveres antes de que se agote todo!\r"
-    - talker: Steven
+    - talker: Alex
       text: "Pero no se que comprar\r\n\xBFQu\xE9 cosas podr\xEDa necesitar?"
     - talker: "Mam\xE1"
       text: "Yo acabo de comprar muchas cosas, pero lo m\xE1s importante es comprar:"
@@ -2463,18 +2463,18 @@ MonoBehaviour:
         higienico y botellas de agua.
     - talker: "Mam\xE1"
       text: "\xA1Tienes que comprar antes de que las cosas se agoten!"
-    - talker: Steven
+    - talker: Alex
       text: "De acuerdo mam\xE1, muchas gracias por avisarme, ire de inmediato al
         super mercado m\xE1s cercano."
     - talker: "Mam\xE1"
       text: "\xA1No olvides llevar un cubrebocas!\n\xA1Debemos cuidarnos desde este
         instante!"
-    - talker: Steven
+    - talker: Alex
       text: "Gracias por recordarmelo mam\xE1, buscar\xE9 uno de inmediato, cuidate
         mucho porfavor."
     - talker: "Mam\xE1"
       text: "Tu tambi\xE9n mi ni\xF1o, \xA1te amo!"
-    - talker: Steven
+    - talker: Alex
       text: "\xA1Y yo a ti mami! Nos vemos...."
   configuracion: {fileID: 11400000, guid: 524ff2cfe798ce346a2bf06151b4baed, type: 2}
 --- !u!1001 &689396016
@@ -3011,7 +3011,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Configuracion
+  m_text: "Configuraci\xF3n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a1d0f93b10b3b3499a14f579a00ce84, type: 2}
   m_sharedMaterial: {fileID: -8619156991914698464, guid: 1a1d0f93b10b3b3499a14f579a00ce84, type: 2}
@@ -5103,7 +5103,7 @@ GameObject:
   - component: {fileID: 1536271203}
   - component: {fileID: 1536271202}
   m_Layer: 5
-  m_Name: ButtonRenaudar
+  m_Name: ButtonReanudar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6027,7 +6027,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Configuracion
+  m_text: "Configuraci\xF3n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a1d0f93b10b3b3499a14f579a00ce84, type: 2}
   m_sharedMaterial: {fileID: -8619156991914698464, guid: 1a1d0f93b10b3b3499a14f579a00ce84, type: 2}
@@ -6312,6 +6312,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botonPausa: {fileID: 392548013}
   menuPausa: {fileID: 24982370}
+  panelMenu: {fileID: 0}
+  panelConfiguracion: {fileID: 0}
 --- !u!114 &1846336848
 MonoBehaviour:
   m_ObjectHideFlags: 0
