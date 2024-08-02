@@ -27,6 +27,8 @@ public class SopaDeLetrasManager : MonoBehaviour
     private int palabrasEncontradas;
     private int rondaActual = 0;
 
+    private List<Letra> letrasSeleccionadas = new List<Letra>();
+
     void Start()
     {
         IniciarJuego();
@@ -59,12 +61,7 @@ public class SopaDeLetrasManager : MonoBehaviour
         tiempoRestante = tiempoLimite;
         palabrasEncontradas = 0;
 
-        if (palabrasActuales.Count == 0)
-        {
-            // Seleccionar nuevas palabras solo si no hay palabras actuales (al iniciar una nueva ronda)
-            SeleccionarPalabrasAleatorias();
-        }
-        
+        SeleccionarPalabrasAleatorias();
         GenerarSopaDeLetras();
         MostrarSopaDeLetras();
         ActualizarTextoPalabras();
@@ -190,7 +187,7 @@ public class SopaDeLetrasManager : MonoBehaviour
         }
     }
 
-   void MostrarSopaDeLetras()
+    void MostrarSopaDeLetras()
     {
         foreach (Transform child in transform)
         {
@@ -201,7 +198,7 @@ public class SopaDeLetrasManager : MonoBehaviour
         {
             for (int y = 0; y < columnas; y++)
             {
-                Vector3 posicion = new Vector3(x, y, 0);
+                Vector3 posicion = new Vector3(y, -x, 0);
                 GameObject letraObj = Instantiate(prefabLetra, posicion, Quaternion.identity, transform);
                 Letra letraScript = letraObj.GetComponent<Letra>();
                 letraScript.ConfigurarLetra(sopaDeLetras[x, y]);
@@ -231,6 +228,11 @@ public class SopaDeLetrasManager : MonoBehaviour
     {
         Debug.Log("Todas las palabras encontradas. Generando nueva sopa de letras.");
         rondaActual++;
+        if (rondaActual >= maximoRondas)
+        {
+            textoMensaje.text = "¡Has completado todas las sopas de letras!";
+            return;
+        }
         palabrasActuales.Clear(); // Limpia las palabras actuales para forzar nuevas
         IniciarJuego();
     }
@@ -244,6 +246,28 @@ public class SopaDeLetrasManager : MonoBehaviour
             GenerarNuevaSopaDeLetras();
         }
     }
+
+    public void LetraSeleccionada(Letra letra)
+    {
+        letrasSeleccionadas.Add(letra);
+
+        string palabraFormada = "";
+        foreach (var l in letrasSeleccionadas)
+        {
+            palabraFormada += l.textoLetra.text;
+        }
+
+        if (palabrasActuales.Contains(palabraFormada))
+        {
+            // Marca la palabra como encontrada
+            textoMensaje.text = "¡Palabra encontrada: " + palabraFormada + "!";
+            foreach (var l in letrasSeleccionadas)
+            {
+                // Opcional: cambiar el color de las letras encontradas
+                l.GetComponent<Text>().color = Color.green;
+            }
+            letrasSeleccionadas.Clear();
+            PalabraEncontrada();
+        }
+    }
 }
-
-

@@ -1,21 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class Letra : MonoBehaviour
+public class Letra : MonoBehaviour, IPointerClickHandler
 {
-    public Text textoLetra; // Campo para el componente de texto que mostrará la letra
+    public Text textoLetra;
+    private SopaDeLetrasManager sopaDeLetrasManager;
 
-    void Awake()
+    void Start()
     {
-        textoLetra = GetComponent<Text>();
+        sopaDeLetrasManager = FindObjectOfType<SopaDeLetrasManager>();
     }
 
-    // Método para configurar la letra que se muestra
     public void ConfigurarLetra(char letra)
     {
-        if (textoLetra != null)
-        {
-            textoLetra.text = letra.ToString();
-        }
+        textoLetra.text = letra.ToString();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        sopaDeLetrasManager.LetraSeleccionada(this);
     }
 }
