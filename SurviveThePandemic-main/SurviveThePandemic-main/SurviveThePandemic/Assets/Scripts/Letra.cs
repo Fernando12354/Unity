@@ -14,7 +14,14 @@ public class Letra : MonoBehaviour, IPointerClickHandler
 
     public void ConfigurarLetra(char letra)
     {
-        textoLetra.text = letra.ToString();
+        if (textoLetra != null)
+        {
+            textoLetra.text = letra.ToString();
+        }
+        else
+        {
+            Debug.LogError("TextoLetra no está asignado en el prefab Letra.");
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)

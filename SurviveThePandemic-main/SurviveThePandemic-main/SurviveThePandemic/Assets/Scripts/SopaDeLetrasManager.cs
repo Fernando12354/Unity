@@ -93,6 +93,9 @@ public class SopaDeLetrasManager : MonoBehaviour
                 palabrasDisponibles.RemoveAt(indice);
             }
         }
+
+        // Verificar palabras seleccionadas
+        Debug.Log("Palabras seleccionadas: " + string.Join(", ", palabrasActuales));
     }
 
     void GenerarSopaDeLetras()
@@ -109,64 +112,82 @@ public class SopaDeLetrasManager : MonoBehaviour
         // Lógica para colocar las palabras en la matriz
         foreach (var palabra in palabrasActuales)
         {
-            ColocarPalabraEnSopa(palabra);
+            if (!ColocarPalabraEnSopa(palabra))
+            {
+                Debug.LogWarning("No se pudo colocar la palabra: " + palabra);
+            }
         }
 
         // Llenar el resto con letras aleatorias
         RellenarConLetrasAleatorias();
     }
 
-    void ColocarPalabraEnSopa(string palabra)
+    bool ColocarPalabraEnSopa(string palabra)
     {
-        bool colocada = false;
-        while (!colocada)
+        int maxIntentos = 100;
+        int intentos = 0;
+
+        while (intentos < maxIntentos)
         {
             int direccion = Random.Range(0, 3); // 0: horizontal, 1: vertical, 2: diagonal
             int x = Random.Range(0, filas);
             int y = Random.Range(0, columnas);
 
-            if (direccion == 0 && y + palabra.Length <= columnas) // Horizontal
+            int dx = 0, dy = 0;
+            bool puedeColocar = false;
+
+            // Determinar la dirección
+            if (direccion == 0 && y + palabra.Length <= columnas)
             {
-                if (PuedeColocarPalabra(x, y, 0, 1, palabra))
-                {
-                    for (int i = 0; i < palabra.Length; i++)
-                    {
-                        sopaDeLetras[x, y + i] = palabra[i];
-                    }
-                    colocada = true;
-                }
+                dx = 0; dy = 1; // horizontal
+                puedeColocar = true;
             }
-            else if (direccion == 1 && x + palabra.Length <= filas) // Vertical
+            else if (direccion == 1 && x + palabra.Length <= filas)
             {
-                if (PuedeColocarPalabra(x, y, 1, 0, palabra))
-                {
-                    for (int i = 0; i < palabra.Length; i++)
-                    {
-                        sopaDeLetras[x + i, y] = palabra[i];
-                    }
-                    colocada = true;
-                }
+                dx = 1; dy = 0; // vertical
+                puedeColocar = true;
             }
-            else if (direccion == 2 && x + palabra.Length <= filas && y + palabra.Length <= columnas) // Diagonal
+            else if (direccion == 2 && x + palabra.Length <= filas && y + palabra.Length <= columnas)
             {
-                if (PuedeColocarPalabra(x, y, 1, 1, palabra))
-                {
-                    for (int i = 0; i < palabra.Length; i++)
-                    {
-                        sopaDeLetras[x + i, y + i] = palabra[i];
-                    }
-                    colocada = true;
-                }
+                dx = 1; dy = 1; // diagonal
+                puedeColocar = true;
             }
+
+            if (puedeColocar && PuedeColocarPalabra(x, y, dx, dy, palabra))
+            {
+                for (int i = 0; i < palabra.Length; i++)
+                {
+                    sopaDeLetras[x + i * dx, y + i * dy] = palabra[i];
+                }
+                Debug.Log("Palabra colocada exitosamente: " + palabra + " en (" + x + ", " + y + ")");
+                return true; // Palabra colocada exitosamente
+            }
+
+            intentos++;
         }
+
+        Debug.LogWarning("No se pudo colocar la palabra: " + palabra + " después de " + maxIntentos + " intentos.");
+        return false; // No se pudo colocar la palabra
     }
 
     bool PuedeColocarPalabra(int x, int y, int dx, int dy, string palabra)
     {
         for (int i = 0; i < palabra.Length; i++)
         {
-            if (sopaDeLetras[x + i * dx, y + i * dy] != '\0' && sopaDeLetras[x + i * dx, y + i * dy] != palabra[i])
+            int nuevoX = x + i * dx;
+            int nuevoY = y + i * dy;
+
+            // Verifica si estamos dentro de los límites
+            if (nuevoX < 0 || nuevoX >= filas || nuevoY < 0 || nuevoY >= columnas)
             {
+                Debug.Log("Fuera de límites al intentar colocar: " + palabra + " en (" + nuevoX + ", " + nuevoY + ")");
+                return false;
+            }
+
+            // Verifica si la posición está ocupada por una letra diferente
+            if (sopaDeLetras[nuevoX, nuevoY] != '\0' && sopaDeLetras[nuevoX, nuevoY] != palabra[i])
+            {
+                Debug.Log("Conflicto al colocar la palabra: " + palabra + " en (" + nuevoX + ", " + nuevoY + ")");
                 return false;
             }
         }
@@ -198,7 +219,7 @@ public class SopaDeLetrasManager : MonoBehaviour
         {
             for (int y = 0; y < columnas; y++)
             {
-                Vector3 posicion = new Vector3(y, -x, 0);
+                Vector3 posicion = ObtenerPosicionDeMatriz(x, y);
                 GameObject letraObj = Instantiate(prefabLetra, posicion, Quaternion.identity, transform);
                 Letra letraScript = letraObj.GetComponent<Letra>();
                 letraScript.ConfigurarLetra(sopaDeLetras[x, y]);
@@ -206,12 +227,19 @@ public class SopaDeLetrasManager : MonoBehaviour
         }
     }
 
+    Vector3 ObtenerPosicionDeMatriz(int x, int y)
+    {
+        // Convertir las coordenadas de la matriz a coordenadas en el mundo
+        float espaciado = 1.0f; // Ajusta este valor según el tamaño del prefab y el espaciado deseado
+        return new Vector3(y * espaciado, -x * espaciado, 0); // Asumiendo que el eje Z es el que se utiliza para el espaciado en 2D
+    }
+
     void ActualizarTextoPalabras()
     {
         textoPalabras.text = "Encuentra las palabras:\n";
         foreach (var palabra in palabrasActuales)
         {
-            textoPalabras.text += palabra + "\n";
+            textoPalabras.text += palabra + ",";
         }
     }
 
