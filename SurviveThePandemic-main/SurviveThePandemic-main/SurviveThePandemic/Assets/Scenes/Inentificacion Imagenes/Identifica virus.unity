@@ -1170,6 +1170,16 @@ MonoBehaviour:
     - "Virus Sincitial Respiratorio, un tipo de virus que afecta las v\xEDas respiratorias."
     - Sistema de Vigilancia Respiratoria, una herramienta para monitorear la salud.
     correctOptionIndex: 3
+  - image: {fileID: 21300000, guid: b344fc907e66f3945a14f2928b20552f, type: 3}
+    question: "\xBFQu\xE9 tipo de virus puede causar los siguientes s\xEDntomas:
+      fiebre, tos, dolor de garganta, dolores musculares, dolor de cabeza, escalofr\xEDos
+      y fatiga?"
+    options:
+    - Influenza H1N1
+    - RSV
+    - Rinovirus
+    - SARS-CoV-2
+    correctOptionIndex: 1
 --- !u!1 &1704018088
 GameObject:
   m_ObjectHideFlags: 0
