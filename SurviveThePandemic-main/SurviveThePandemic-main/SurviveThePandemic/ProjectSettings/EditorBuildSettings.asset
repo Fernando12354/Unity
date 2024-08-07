@@ -36,12 +36,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Local 2.unity
     guid: 6e8234a738a99fd4a840756c7667b35b
   - enabled: 1
-    path: Assets/Scenes/Mapa.unity
+    path: Assets/Scenes/Nivel 1/Mapa.unity
     guid: 3e043471cf8886a4ca260315fa62de39
   - enabled: 1
-    path: Assets/Scenes/Rompecabezas/Menu.unity
+    path: Assets/Scenes/Nivel 1/Rompecabezas/Menu.unity
     guid: d1590adffbb70ab49b4e480d300285c1
   - enabled: 1
-    path: Assets/Scenes/Rompecabezas/Juego.unity
+    path: Assets/Scenes/Nivel 1/Rompecabezas/Juego.unity
     guid: b565749094333964697897719eee63c4
   m_configObjects: {}
