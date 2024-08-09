@@ -7241,6 +7241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703f06da55610eb46b34fd38dbb8b05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionAnimator: {fileID: 1177889757}
   numeroEscena: 9
 --- !u!1001 &3434214784683463225
 PrefabInstance:

@@ -4,25 +4,29 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Cambio : MonoBehaviour
 {
-    private Animator transitionAnimator;
+    public Animator transitionAnimator;  // Asigna esto manualmente en el Inspector
     public int numeroEscena;
+
     void Start() {
-        transitionAnimator = GetComponentInChildren<Animator>();
+        if (transitionAnimator == null) {
+            Debug.LogError("Animator no asignado en el Inspector.");
+        }
     }
-    private void OnTriggerEnter(Collider other){
+
+    private void OnTriggerEnter(Collider other) {
         if (other.tag == "Player")
         {
- //           SceneManager.LoadScene(numeroEscena);
             StartCoroutine(SceneLoad(numeroEscena));
         }
     }
 
-   public IEnumerator SceneLoad(int sceneIndex)
+    public IEnumerator SceneLoad(int sceneIndex)
     {
-        transitionAnimator.SetTrigger("StartTransition");
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(sceneIndex);
+        if (transitionAnimator != null) {
+            transitionAnimator.SetTrigger("StartTransition");
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene(sceneIndex);
+        }
     }
-
-
 }
+
