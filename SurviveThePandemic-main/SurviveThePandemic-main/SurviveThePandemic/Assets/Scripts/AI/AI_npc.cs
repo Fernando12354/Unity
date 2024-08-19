@@ -12,7 +12,7 @@ public class AI_npc : MonoBehaviour
 
     void Start()
     {
-        // navMeshAgent.destination = goalDestination.transform.position;
+        navMeshAgent.destination = goalDestination.transform.position;
         StartCoroutine (nuevoDestino());
     }
 
