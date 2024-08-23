@@ -11,11 +11,24 @@ public class DialogManager : MonoBehaviour
     public GameObject dialogBox;            // Caja de diálogo que se muestra en la pantalla
 
     [Header("Diálogos")]
-    public List<Sprite> characterImages;    // Imágenes de los personajes
-    public List<string> characterNames;     // Nombres de los personajes
-    public List<List<string>> dialogSentences; // Frases del diálogo, cada lista corresponde a un personaje
+    public Sprite[] characterImages = new Sprite[] 
+    {
+        // Añade aquí tus imágenes de personajes
+        // Por ejemplo:
+        // Resources.Load<Sprite>("path_to_image1"),
+        // Resources.Load<Sprite>("path_to_image2")
+    };
+
+    public string[] dialogTexts = new string[]
+    {
+        "Hola",    // Primer diálogo
+        "¿Cómo estás?",
+        "Vamos a la escuela."
+        // Añade más diálogos según sea necesario
+    };
 
     private Queue<string> sentences;        // Cola de frases
+    private int currentDialogIndex = -1;    // Índice del diálogo actual
     private bool isDialogActive = false;    // Indica si el diálogo está activo
 
     private void Start()
@@ -26,50 +39,67 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog(int dialogIndex)
     {
-
-         Debug.Log("eNTRO AL OTRO SCRIPT.");
-        if (dialogIndex >= dialogSentences.Count || dialogIndex >= characterImages.Count)
+        if (dialogIndex < 0 || dialogIndex >= dialogTexts.Length || dialogIndex >= characterImages.Length)
         {
             Debug.LogError("Índice de diálogo fuera de rango.");
             return;
         }
 
+        // Activar la caja de diálogo y los componentes de UI
+        dialogBox.SetActive(true);
+        dialogText.gameObject.SetActive(true);
+        characterImage.gameObject.SetActive(true);
+
         // Pausar el juego
         Time.timeScale = 0f;
 
-        // Mostrar el panel de diálogo
-        dialogBox.SetActive(true);
-
-        // Asignar la imagen del personaje y el nombre
+        // Asignar la imagen del personaje y el texto del diálogo
         characterImage.sprite = characterImages[dialogIndex];
-        dialogText.text = "";
+        dialogText.text = ""; // Limpiar el texto al inicio del diálogo
 
+        // Preparar las frases del diálogo
         sentences.Clear();
-        foreach (string sentence in dialogSentences[dialogIndex])
-        {
-            sentences.Enqueue(sentence);
-        }
+        sentences.Enqueue(dialogTexts[dialogIndex]);
 
+        // Mostrar la primera frase del diálogo
         DisplayNextSentence();
-        isDialogActive = true; // Indica que el diálogo está activo
+
+        // Marcar el diálogo como activo
+        isDialogActive = true;
+        currentDialogIndex = dialogIndex; // Guardar el índice del diálogo actual
     }
 
     public void DisplayNextSentence()
     {
         if (sentences.Count == 0)
         {
-            EndDialog();
+            MoveToNextDialog();
             return;
         }
 
+        // Mostrar la siguiente frase
         string sentence = sentences.Dequeue();
-        dialogText.text = sentence; // Mostrar el texto de la frase
+        dialogText.text = sentence;
+    }
+
+    private void MoveToNextDialog()
+    {
+        if (currentDialogIndex < dialogTexts.Length - 1)
+        {
+            currentDialogIndex++;
+            StartDialog(currentDialogIndex);
+        }
+        else
+        {
+            EndDialog();
+        }
     }
 
     public void EndDialog()
     {
-        dialogBox.SetActive(false);        // Ocultar la caja de diálogo
-        isDialogActive = false;            // Indica que el diálogo ha terminado
+        // Ocultar la caja de diálogo y marcar el diálogo como inactivo
+        dialogBox.SetActive(false);
+        isDialogActive = false;
 
         // Reanudar el juego
         Time.timeScale = 1f;
@@ -77,10 +107,12 @@ public class DialogManager : MonoBehaviour
 
     private void Update()
     {
+        // Avanzar al siguiente diálogo cuando se presiona Enter
         if (isDialogActive && Input.GetKeyDown(KeyCode.Return))
         {
             DisplayNextSentence();
         }
     }
 }
-   
+
+
