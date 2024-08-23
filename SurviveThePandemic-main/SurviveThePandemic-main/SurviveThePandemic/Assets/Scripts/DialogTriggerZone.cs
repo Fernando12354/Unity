@@ -2,22 +2,21 @@ using UnityEngine;
 
 public class DialogTriggerZone : MonoBehaviour
 {
-    public Dialog dialog; // Asigna el diálogo en el inspector
-    private DialogManager dialogManager;
+    public DialogManager dialogManager;
+    public int dialogIndex; // Índice del diálogo que se mostrará
 
-    void Start()
-    {
-        dialogManager = FindObjectOfType<DialogManager>();
-    }
+    private bool hasTriggered = false;
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) // Asegúrate de que el jugador tenga la etiqueta "Player"
+
+         Debug.Log("Afuera.");
+        if (other.CompareTag("Player") && !hasTriggered)
         {
-            if (dialogManager != null)
-            {
-                dialogManager.StartDialog(dialog);
-            }
+
+             Debug.Log("Jugador ha entrado en la zona de activación.");
+            hasTriggered = true;
+            dialogManager.StartDialog(dialogIndex);
         }
     }
 }

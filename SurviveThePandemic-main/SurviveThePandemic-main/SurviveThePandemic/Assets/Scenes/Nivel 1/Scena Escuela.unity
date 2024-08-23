@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43766433, g: 0.48553574, b: 0.5658142, a: 1}
+  m_IndirectSpecularColor: {r: 0.43766385, g: 0.4855352, b: 0.56581295, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6755,53 +6755,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465938284}
   m_CullTransparentMesh: 1
---- !u!1 &483724551
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 483724553}
-  - component: {fileID: 483724552}
-  m_Layer: 0
-  m_Name: DialogManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &483724552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483724551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaaa27f176ce4374b950cae18c15b3e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  dialogText: {fileID: 835947706}
-  dialogBox: {fileID: 0}
-  player: {fileID: 0}
---- !u!4 &483724553
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483724551}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 168
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &496962559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17611,9 +17564,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c948ec5f76d2d42bdd83676a7c56f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    characterName: 
-    sentences: []
+  dialogManager: {fileID: 1913804292}
+  dialogIndex: 0
 --- !u!65 &914231815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17639,7 +17591,7 @@ Transform:
   m_LocalScale: {x: 6.041158, y: 1.8147, z: 9.995413}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 169
+  m_RootOrder: 168
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &925570364
 GameObject:
@@ -26371,7 +26323,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 170
+  m_RootOrder: 169
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1542035344
 GameObject:
@@ -26390,7 +26342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1542035345
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26404,6 +26356,7 @@ RectTransform:
   m_Children:
   - {fileID: 1528243751}
   - {fileID: 835947708}
+  - {fileID: 1913804293}
   m_Father: {fileID: 590786080}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30715,6 +30668,58 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.104333796, y: 0.029768363, z: 0.123612925}
   m_Center: {x: -0.002942031, y: -0.015451604, z: 0.000000008161607}
+--- !u!1 &1913804291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1913804293}
+  - component: {fileID: 1913804292}
+  m_Layer: 0
+  m_Name: Dialog Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1913804292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913804291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ec0f3a2cf910946aeaf595a0c3d18a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogText: {fileID: 835947706}
+  characterImage: {fileID: 1528243752}
+  dialogBox: {fileID: 590786079}
+  characterImages:
+  - {fileID: 21300000, guid: ebdc856ac09d29d4bb0fe4788ccfbd25, type: 3}
+  - {fileID: 21300000, guid: ebdc856ac09d29d4bb0fe4788ccfbd25, type: 3}
+  characterNames:
+  - "\xA1Hola, chicos! \xBFC\xF3mo est\xE1n?\""
+  - holaa
+--- !u!4 &1913804293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913804291}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1542035345}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1921173067
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,32 +5,47 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
-    public TextMeshProUGUI nameText;
-    public TextMeshProUGUI dialogText;
-    public GameObject dialogBox; // Caja de diálogo que se muestra en la pantalla
-    public Image characterImage; // Imagen del personaje que habla
-    public GameObject player; // Referencia al jugador para pausar el movimiento
+    [Header("Configuración de UI")]
+    public TextMeshProUGUI dialogText;      // Texto del diálogo
+    public Image characterImage;            // Imagen del personaje
+    public GameObject dialogBox;            // Caja de diálogo que se muestra en la pantalla
 
-    private Queue<DialogSentence> sentences;
-    private bool isDialogActive = false;
+    [Header("Diálogos")]
+    public List<Sprite> characterImages;    // Imágenes de los personajes
+    public List<string> characterNames;     // Nombres de los personajes
+    public List<List<string>> dialogSentences; // Frases del diálogo, cada lista corresponde a un personaje
 
-    void Start()
+    private Queue<string> sentences;        // Cola de frases
+    private bool isDialogActive = false;    // Indica si el diálogo está activo
+
+    private void Start()
     {
-        sentences = new Queue<DialogSentence>();
-        dialogBox.SetActive(false); // Asegúrate de que la caja de diálogo esté inicialmente oculta
+        sentences = new Queue<string>();
+        dialogBox.SetActive(false);          // Asegúrate de que la caja de diálogo esté inicialmente oculta
     }
 
-    public void StartDialog(Dialog dialog)
+    public void StartDialog(int dialogIndex)
     {
+
+         Debug.Log("eNTRO AL OTRO SCRIPT.");
+        if (dialogIndex >= dialogSentences.Count || dialogIndex >= characterImages.Count)
+        {
+            Debug.LogError("Índice de diálogo fuera de rango.");
+            return;
+        }
+
         // Pausar el juego
         Time.timeScale = 0f;
 
-        dialogBox.SetActive(true); // Mostrar la caja de diálogo
-        nameText.text = dialog.characterName; // Mostrar el nombre del personaje
+        // Mostrar el panel de diálogo
+        dialogBox.SetActive(true);
+
+        // Asignar la imagen del personaje y el nombre
+        characterImage.sprite = characterImages[dialogIndex];
+        dialogText.text = "";
 
         sentences.Clear();
-
-        foreach (var sentence in dialog.sentences)
+        foreach (string sentence in dialogSentences[dialogIndex])
         {
             sentences.Enqueue(sentence);
         }
@@ -47,28 +62,25 @@ public class DialogManager : MonoBehaviour
             return;
         }
 
-        var sentence = sentences.Dequeue();
-        dialogText.text = sentence.text;
-        characterImage.sprite = sentence.characterSprite; // Mostrar la imagen del personaje
+        string sentence = sentences.Dequeue();
+        dialogText.text = sentence; // Mostrar el texto de la frase
     }
 
-    void Update()
+    public void EndDialog()
+    {
+        dialogBox.SetActive(false);        // Ocultar la caja de diálogo
+        isDialogActive = false;            // Indica que el diálogo ha terminado
+
+        // Reanudar el juego
+        Time.timeScale = 1f;
+    }
+
+    private void Update()
     {
         if (isDialogActive && Input.GetKeyDown(KeyCode.Return))
         {
             DisplayNextSentence();
         }
     }
-
-    void EndDialog()
-    {
-        dialogBox.SetActive(false); // Ocultar la caja de diálogo
-        isDialogActive = false; // Indica que el diálogo ha terminado
-
-        // Reanudar el juego
-        Time.timeScale = 1f;
-    }
 }
-
-
-
+   
