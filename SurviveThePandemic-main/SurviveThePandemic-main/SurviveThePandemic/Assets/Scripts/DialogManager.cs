@@ -21,9 +21,9 @@ public class DialogManager : MonoBehaviour
 
     public string[] dialogTexts = new string[]
     {
-        "Hola",    // Primer diálogo
+       /* "Hola",    // Primer diálogo
         "¿Cómo estás?",
-        "Vamos a la escuela."
+        "Vamos a la escuela."*/
         // Añade más diálogos según sea necesario
     };
 
@@ -114,5 +114,3 @@ public class DialogManager : MonoBehaviour
         }
     }
 }
-
-
