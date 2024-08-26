@@ -9,22 +9,17 @@ public class DialogManager : MonoBehaviour
     public TextMeshProUGUI dialogText;      // Texto del diálogo
     public Image characterImage;            // Imagen del personaje
     public GameObject dialogBox;            // Caja de diálogo que se muestra en la pantalla
+    public GameObject healthBarCanvas;      // Referencia al Canvas de la barra de vida
 
     [Header("Diálogos")]
     public Sprite[] characterImages = new Sprite[] 
     {
         // Añade aquí tus imágenes de personajes
-        // Por ejemplo:
-        // Resources.Load<Sprite>("path_to_image1"),
-        // Resources.Load<Sprite>("path_to_image2")
     };
 
     public string[] dialogTexts = new string[]
     {
-       /* "Hola",    // Primer diálogo
-        "¿Cómo estás?",
-        "Vamos a la escuela."*/
-        // Añade más diálogos según sea necesario
+        // Añade los diálogos aquí
     };
 
     private Queue<string> sentences;        // Cola de frases
@@ -35,6 +30,10 @@ public class DialogManager : MonoBehaviour
     {
         sentences = new Queue<string>();
         dialogBox.SetActive(false);          // Asegúrate de que la caja de diálogo esté inicialmente oculta
+        if (healthBarCanvas != null)
+        {
+            healthBarCanvas.SetActive(true); // Asegúrate de que la barra de vida esté activa al inicio
+        }
     }
 
     public void StartDialog(int dialogIndex)
@@ -43,6 +42,12 @@ public class DialogManager : MonoBehaviour
         {
             Debug.LogError("Índice de diálogo fuera de rango.");
             return;
+        }
+
+        // Ocultar el canvas de la barra de vida
+        if (healthBarCanvas != null)
+        {
+            healthBarCanvas.SetActive(false);
         }
 
         // Activar la caja de diálogo y los componentes de UI
@@ -103,6 +108,12 @@ public class DialogManager : MonoBehaviour
 
         // Reanudar el juego
         Time.timeScale = 1f;
+
+        // Volver a activar el canvas de la barra de vida
+        if (healthBarCanvas != null)
+        {
+            healthBarCanvas.SetActive(true);
+        }
     }
 
     private void Update()
