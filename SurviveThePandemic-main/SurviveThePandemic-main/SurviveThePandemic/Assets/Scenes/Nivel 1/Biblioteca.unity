@@ -971,6 +971,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac5957607893dbb4bbb5d35d8b39cdf9, type: 3}
+--- !u!95 &244962111 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4595579530510801756, guid: 4e95a7bd459d85342b1dae8ed7b2947f, type: 3}
+  m_PrefabInstance: {fileID: 1245038270}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &245136163
 GameObject:
   m_ObjectHideFlags: 0
@@ -3341,8 +3346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703f06da55610eb46b34fd38dbb8b05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAnimator: {fileID: 0}
-  numeroEscena: 4
+  transitionAnimator: {fileID: 244962111}
+  numeroEscena: 5
 --- !u!65 &849637640
 BoxCollider:
   m_ObjectHideFlags: 0
