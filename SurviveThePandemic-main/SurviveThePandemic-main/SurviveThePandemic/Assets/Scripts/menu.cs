@@ -10,8 +10,8 @@ public class menu : MonoBehaviour
         PlayerPrefs.SetInt("Nivel", Nivel);
         SceneManager.LoadScene("Juego");
     }
-    public void RedesSociales(string URL)
+    public void Salir(int sceneIndex)
     {
-        Application.OpenURL(URL);
+       SceneManager.LoadScene(sceneIndex);
     }
 }

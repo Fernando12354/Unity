@@ -34,6 +34,9 @@ public class ScriptLibroDatos : MonoBehaviour
             Time.timeScale = 0f; // Pausar el juego
             isPaused = true;
             gameObject.SetActive(false); // Ocultar el objeto libro
+
+            // Cambiar la resolución cuando se muestra el panel
+            Screen.SetResolution(3840, 2160, FullScreenMode.FullScreenWindow); // Resolución en pantalla completa
         }
     }
 
@@ -44,6 +47,9 @@ public class ScriptLibroDatos : MonoBehaviour
         isPaused = false;
 
         currentFactIndex++; // Pasar al siguiente dato
+
+        // Cambiar la resolución cuando se oculta el panel
+        Screen.SetResolution(1920, 1080, FullScreenMode.FullScreenWindow); // Cambiar a otra resolución
     }
 
     void Update()
