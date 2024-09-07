@@ -21,6 +21,7 @@ public class Coin : MonoBehaviour
 
     [Header("Next Coin")]   
     public GameObject NextCoin;
+    
 
     private bool coin_working = false;
     // Start is called before the first frame update
@@ -51,7 +52,7 @@ public class Coin : MonoBehaviour
             yield return new WaitForSeconds(0.8f);
             ContenedorPadre.SetActive(false);
             // yield return new WaitForSeconds(1);
-            NextCoin.SetActive(true);
+          //  NextCoin.SetActive(true);
         }
     }    
 

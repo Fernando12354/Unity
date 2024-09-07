@@ -2445,37 +2445,22 @@ MonoBehaviour:
     answer: Alex
     dialogos:
     - talker: Alex
-      text: "Hola mam\xE1, \xBFTodo bien?"
+      text: "Hola mam\xE1"
     - talker: "Mam\xE1"
-      text: "\xA1Alex! \xBFYa viste las noticias? \xA1LA OMS ACABA DE DECLARAR PANDEMIA
-        MUNDIAL POR UN VIRUS MUY EXTRA\xD1O Y PELIGROSO!\r"
+      text: "\xA1Hijo, ya es hora de levantarse! Vas a llegar tarde a la escuela."
     - talker: Alex
-      text: "\xBF\xA1Qu\xE9!? \xA1No sabia nada de eso!\r"
+      text: "Solo cinco minutos m\xE1s, mam\xE1..."
     - talker: "Mam\xE1"
-      text: "Deber\xE1s quedarte en casa lo m\xE1ximo posible. \n\xA1As\xED que tienes
-        que ir por v\xEDveres antes de que se agote todo!\r"
+      text: "No, ya es tarde, \xA1lev\xE1ntate ahora! Y no te olvides de conseguir
+        dinero para el autob\xFAs, no quiero que te vayas a quedar sin c\xF3mo llegar."
     - talker: Alex
-      text: "Pero no se que comprar\r\n\xBFQu\xE9 cosas podr\xEDa necesitar?"
+      text: "Est\xE1 bien, est\xE1 bien..."
     - talker: "Mam\xE1"
-      text: "Yo acabo de comprar muchas cosas, pero lo m\xE1s importante es comprar:"
-    - talker: "Mam\xE1"
-      text: Comida enlatada, cubrebocas, desinfectante, gel antibacterial, papel
-        higienico y botellas de agua.
-    - talker: "Mam\xE1"
-      text: "\xA1Tienes que comprar antes de que las cosas se agoten!"
+      text: Pero date prisa, o se te va a hacer tarde.
     - talker: Alex
-      text: "De acuerdo mam\xE1, muchas gracias por avisarme, ire de inmediato al
-        super mercado m\xE1s cercano."
+      text: Ya me levanto.
     - talker: "Mam\xE1"
-      text: "\xA1No olvides llevar un cubrebocas!\n\xA1Debemos cuidarnos desde este
-        instante!"
-    - talker: Alex
-      text: "Gracias por recordarmelo mam\xE1, buscar\xE9 uno de inmediato, cuidate
-        mucho porfavor."
-    - talker: "Mam\xE1"
-      text: "Tu tambi\xE9n mi ni\xF1o, \xA1te amo!"
-    - talker: Alex
-      text: "\xA1Y yo a ti mami! Nos vemos...."
+      text: "Eso espero, porque si no, tendr\xE1s que ir corriendo a la escuela.\n"
   configuracion: {fileID: 11400000, guid: 524ff2cfe798ce346a2bf06151b4baed, type: 2}
 --- !u!1001 &689396016
 PrefabInstance:
