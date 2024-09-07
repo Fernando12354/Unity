@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1393,10 +1393,10 @@ MonoBehaviour:
   - image: {fileID: 21300000, guid: 053b033f163c59849abfe9606044e50a, type: 3}
     question: El bocavirus es un virus que...
     options:
-    - Puede causar dolores Estomacales
-    - Puede probocar inecciones en los idos
+    - Puede causar dolores estomacales
+    - "Puede provocar infecciones en los o\xEDdos"
     - Puede causar problemas respiratorios como tos
-    - Puede Probocar dolor de piernas
+    - Puede provocar dolor de piernas
     correctOptionIndex: 2
   - image: {fileID: 21300000, guid: 55ff0100fdfa1714c8fa869b61c79013, type: 3}
     question: "\xBFCu\xE1les son los s\xEDntomas del adenovirus?"
@@ -1407,7 +1407,7 @@ MonoBehaviour:
     - "Aumento de energ\xEDa y fuerza f\xEDsica."
     correctOptionIndex: 2
   - image: {fileID: 21300000, guid: d5f1a173540c5e744b658b559121cafa, type: 3}
-    question: "\xBFQue virus es este?"
+    question: "\xBFQu\xE9 virus es este?"
     options:
     - Entero Virus
     - Covid-19
@@ -1415,7 +1415,7 @@ MonoBehaviour:
     - Hantavirus
     correctOptionIndex: 0
   - image: {fileID: 21300000, guid: f8382fb89dd3953439119e8b7e73fe83, type: 3}
-    question: "C\xF3mo se llama la enfermedad que puede causar el virus de Epstein?"
+    question: "\xBFC\xF3mo se llama la enfermedad que puede causar el virus de Epstein?"
     options:
     - La gripe.
     - La varicela.
