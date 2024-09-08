@@ -46,6 +46,7 @@ public class DialogTriggerZoneSinVida : MonoBehaviour
     public AudioSource musicAudioSource; // Referencia al AudioSource de la música
 
     private bool hasTriggered = false;
+    public GameObject ZonaDeDialogosPost;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -85,6 +86,11 @@ public class DialogTriggerZoneSinVida : MonoBehaviour
 
         // Reanudar la música
         ResumeMusic();
+
+          if (ZonaDeDialogosPost != null)
+        {
+            ZonaDeDialogosPost.SetActive(true); // Activa el GameObject con MessageManager
+        }
     }
 
     private void PauseMusic()
