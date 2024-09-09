@@ -10379,9 +10379,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e4a056fe4dc0794f848ceb25fc33ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogText: {fileID: 0}
-  characterImage: {fileID: 0}
-  dialogBox: {fileID: 0}
+  dialogText: {fileID: 87325848}
+  characterImage: {fileID: 1257014397}
+  dialogBox: {fileID: 1501297420}
   characterImages:
   - {fileID: 21300000, guid: ebdc856ac09d29d4bb0fe4788ccfbd25, type: 3}
   - {fileID: 0}
