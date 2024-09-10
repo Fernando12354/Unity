@@ -2057,7 +2057,7 @@ PrefabInstance:
     - target: {fileID: -7635826562936255635, guid: 9a1941102ca7aa147a3b152a6cc94002, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: da99d6bdbfea22143b2241f6bbc09d55, type: 2}
+      objectReference: {fileID: -8018864369454210021, guid: ba55b8e45634b1242b86138585ee7282, type: 3}
     - target: {fileID: 919132149155446097, guid: 9a1941102ca7aa147a3b152a6cc94002, type: 3}
       propertyPath: m_Name
       value: Character_room-4-Sofa
@@ -3692,7 +3692,7 @@ PrefabInstance:
     - target: {fileID: -7635826562936255635, guid: 420f160506190b04d8fc430d4eaa9913, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: da99d6bdbfea22143b2241f6bbc09d55, type: 2}
+      objectReference: {fileID: 2100000, guid: 7ae3e8dd410ac634786a1b0969b65852, type: 2}
     - target: {fileID: 919132149155446097, guid: 420f160506190b04d8fc430d4eaa9913, type: 3}
       propertyPath: m_Name
       value: Character_room-6-Pared01
@@ -4442,7 +4442,7 @@ PrefabInstance:
     - target: {fileID: -7635826562936255635, guid: eeb2e220f90fc654fba5004199bc9092, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: da99d6bdbfea22143b2241f6bbc09d55, type: 2}
+      objectReference: {fileID: 2100000, guid: 7ae3e8dd410ac634786a1b0969b65852, type: 2}
     - target: {fileID: 919132149155446097, guid: eeb2e220f90fc654fba5004199bc9092, type: 3}
       propertyPath: m_Name
       value: Character_room-5-Pared02
