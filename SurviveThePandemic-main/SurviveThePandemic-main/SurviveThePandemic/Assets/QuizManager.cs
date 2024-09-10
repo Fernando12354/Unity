@@ -82,7 +82,7 @@ public class QuizManager : MonoBehaviour
         else
         {
             continueButton.SetActive(true); // Mostrar el botón de continuar
-            retryButton.SetActive(false); // Ocultar el botón de reintento
+            retryButton.SetActive(true); // Ocultar el botón de reintento
         }
     }
 

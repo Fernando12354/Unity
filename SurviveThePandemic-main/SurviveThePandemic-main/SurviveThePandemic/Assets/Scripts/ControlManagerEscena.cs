@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ControlManagerEscena : MonoBehaviour
 {
+    /*
     public GameObject CuboTienda;
     public GameObject CuboEnfermeria;
     public GameObject CuboSalida;
@@ -44,5 +45,5 @@ public class ControlManagerEscena : MonoBehaviour
 
         // Guardar el nuevo estado
         GuardarEstadoCubo();
-    }
+    }*/
 }
