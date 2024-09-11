@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 794775518}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3112,7 +3112,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474790011}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.20000005, y: 2.3000002, z: 1.1999999}
@@ -5666,6 +5666,7 @@ GameObject:
   - component: {fileID: 1034406517}
   - component: {fileID: 1034406516}
   - component: {fileID: 1034406515}
+  - component: {fileID: 1034406518}
   m_Layer: 0
   m_Name: CuboTienda
   m_TagString: Untagged
@@ -5681,7 +5682,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034406513}
   m_LocalRotation: {x: -0, y: 0.7081213, z: -0, w: -0.70609075}
-  m_LocalPosition: {x: -1.3900006, y: 3.1153, z: -2}
+  m_LocalPosition: {x: -1.16, y: 3.1153, z: -2}
   m_LocalScale: {x: 1.4608295, y: 2.6556072, z: 0.5526732}
   m_Children: []
   m_Father: {fileID: 474790012}
@@ -5751,6 +5752,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034406513}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1034406518
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034406513}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9999998, y: 0.99999994, z: 0.9999999}
+  m_Center: {x: -0.00000023841858, y: 0, z: 0}
 --- !u!1 &1071066266
 GameObject:
   m_ObjectHideFlags: 0
@@ -5896,6 +5910,7 @@ GameObject:
   - component: {fileID: 1079576420}
   - component: {fileID: 1079576419}
   - component: {fileID: 1079576418}
+  - component: {fileID: 1079576421}
   m_Layer: 0
   m_Name: CuboSalida
   m_TagString: Untagged
@@ -5929,8 +5944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703f06da55610eb46b34fd38dbb8b05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAnimator: {fileID: 0}
-  numeroEscena: 0
+  transitionAnimator: {fileID: 760324728}
+  numeroEscena: 19
 --- !u!23 &1079576419
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5981,6 +5996,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079576416}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1079576421
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079576416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 0.99999994}
+  m_Center: {x: 0.000000044703484, y: 0.000000059604645, z: 0}
 --- !u!1001 &1114009659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6848,6 +6876,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357186386}
   m_CullTransparentMesh: 1
+--- !u!1 &1397671129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1397671131}
+  - component: {fileID: 1397671130}
+  m_Layer: 0
+  m_Name: ControlUniversalPasilloMall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1397671130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397671129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69df6e1ae84d02b40afbbda7f497fd77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  c1: {fileID: 1034406513}
+  c2: {fileID: 1922410060}
+  cuboSalida: {fileID: 1079576416}
+  CanvasDialogosSecundarios: {fileID: 294906751}
+--- !u!4 &1397671131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397671129}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1415963394
 GameObject:
   m_ObjectHideFlags: 0
@@ -8441,6 +8516,7 @@ GameObject:
   - component: {fileID: 1922410064}
   - component: {fileID: 1922410063}
   - component: {fileID: 1922410062}
+  - component: {fileID: 1922410065}
   m_Layer: 0
   m_Name: CuboEnfermeria
   m_TagString: Untagged
@@ -8475,7 +8551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionAnimator: {fileID: 760324728}
-  numeroEscena: 16
+  numeroEscena: 17
 --- !u!23 &1922410063
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8526,6 +8602,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922410060}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1922410065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922410060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 0.99999994, z: 1}
+  m_Center: {x: -0.00000035762787, y: -0.00000011920929, z: -0.0000038146973}
 --- !u!1 &1961947659
 GameObject:
   m_ObjectHideFlags: 0
@@ -8936,20 +9025,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 22a153f821156cc46878c8f674994b04, type: 3}
   m_PrefabInstance: {fileID: 2057998032}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2057998034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057998033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 703f06da55610eb46b34fd38dbb8b05d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transitionAnimator: {fileID: 760324728}
-  numeroEscena: 17
 --- !u!65 &2057998035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8958,7 +9033,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057998033}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.20000005, y: 2.3000002, z: 1.1999999}
@@ -9362,20 +9437,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: afe6d2eb285db264bb49758cf6f9b138, type: 3}
   m_PrefabInstance: {fileID: 2139887122}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2139887128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139887127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 703f06da55610eb46b34fd38dbb8b05d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transitionAnimator: {fileID: 760324728}
-  numeroEscena: 4
 --- !u!65 &2139887129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9384,7 +9445,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139887127}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.20000008, y: 2.3000002, z: 1.2}

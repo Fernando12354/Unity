@@ -7,12 +7,22 @@ public class InvisibleWallScript : MonoBehaviour
     public string objectiveName; // El nombre del objetivo necesario
     public string sceneToLoad; // Nombre de la escena que se cargará
 
+    public ControlUniversal objetivoManager;
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             if (objectiveController != null && objectiveController.IsObjectiveCompleted(objectiveName))
             {
+
+                if (objetivoManager!=null){
+
+                    objetivoManager.GuardarEstadoCubos();
+
+
+                }
                 SceneManager.LoadScene(sceneToLoad);
             }
             else
