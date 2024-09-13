@@ -2,11 +2,20 @@ using UnityEngine;
 
 public class JabonMovimiento : MonoBehaviour
 {
+    public RectTransform imagenJabon; // RectTransform del jabón
+    public Canvas canvas; // Asignar el Canvas donde está el jabón
     void Update()
     {
-        // Mover el objeto del jabón al seguir el cursor
-        Vector3 mousePosition = Input.mousePosition;
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
+       // Mover la imagen del jabón siguiendo el cursor
+        Vector2 posicionCursor;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            canvas.transform as RectTransform, 
+            Input.mousePosition, 
+            canvas.worldCamera, // Si el Canvas está en Screen Space - Camera
+            out posicionCursor
+        );
+
+        // Asigna la posición del cursor al objeto Jabón
+        imagenJabon.anchoredPosition = posicionCursor;
     }
 }

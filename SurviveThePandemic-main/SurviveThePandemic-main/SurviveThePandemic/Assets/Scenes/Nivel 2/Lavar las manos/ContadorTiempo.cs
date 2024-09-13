@@ -1,11 +1,12 @@
 using UnityEngine;
+using TMPro; // Importar TextMesh Pro
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ContadorTiempo : MonoBehaviour
 {
     public float tiempoLimite = 60f;
-    public Text textoTiempo;
+    public TMP_Text textoTiempo; // Cambiar a TMP_Text para usar TextMesh Pro
     public Image burbujas;
     public GameObject pantallaVictoria;
     public GameObject pantallaDerrota;
@@ -14,7 +15,7 @@ public class ContadorTiempo : MonoBehaviour
     {
         // Actualizar el tiempo
         tiempoLimite -= Time.deltaTime;
-        textoTiempo.text = "Tiempo: " + Mathf.Round(tiempoLimite).ToString();
+        textoTiempo.text = "Tiempo: " + Mathf.Round(tiempoLimite).ToString(); // Actualiza el texto con TextMesh Pro
 
         if (tiempoLimite <= 0)
         {
@@ -55,4 +56,3 @@ public class ContadorTiempo : MonoBehaviour
         SceneManager.LoadScene("NombreDeLaSiguienteEscena"); // Cambia a otra escena
     }
 }
-
