@@ -7625,6 +7625,7 @@ MonoBehaviour:
   c1: {fileID: 0}
   c2: {fileID: 0}
   cuboSalida: {fileID: 0}
+  CanvasDialogosSecundarios: {fileID: 0}
 --- !u!4 &1023410841
 Transform:
   m_ObjectHideFlags: 0
@@ -8220,6 +8221,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8f6818b0dcd71a4192d25743aea68e6, type: 3}
+--- !u!1 &1079129528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a8f6818b0dcd71a4192d25743aea68e6, type: 3}
+  m_PrefabInstance: {fileID: 1079129527}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1079129529
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079129528}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.008500005
+  m_Height: 0.03
+  m_Direction: 1
+  m_Center: {x: 0.0015000007, y: 0.015, z: 0.0030000017}
 --- !u!1001 &1083441936
 PrefabInstance:
   m_ObjectHideFlags: 0

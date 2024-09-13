@@ -71,6 +71,12 @@ public class DialogTriggerZoneSinVida : MonoBehaviour
             }
             else
             {
+
+                if (objectiveController != null && !string.IsNullOrEmpty(objectiveName))
+                {
+                    objectiveController.CompleteObjective(objectiveName);
+                }
+                
                 Debug.LogError("DialogManager no asignado en DialogTriggerZone.");
             }
         }
