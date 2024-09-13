@@ -18,12 +18,21 @@ public class ControlUniversal : MonoBehaviour
     private void CargarEstadoCubos()
     {
         int numCargas = PlayerPrefs.GetInt("NumCargasEscena", 0);
+        if(numCargas > 2){
+            numCargas=0;
+            PlayerPrefs.SetInt("NumCargasEscena", 0); // Resetear en PlayerPrefs
+            PlayerPrefs.Save();
+        }
 
         if (numCargas == 0)
         {
             c1.SetActive(true);  // Activar c1
             c2.SetActive(false); // Desactivar c2
             cuboSalida.SetActive(false); // Desactivar cuboSalida
+
+             if(CanvasDialogosSecundarios!=null){
+                CanvasDialogosSecundarios.SetActive(true);
+            }
         }
         else if (numCargas == 1)
         {
@@ -43,6 +52,9 @@ public class ControlUniversal : MonoBehaviour
             c1.SetActive(false);
             c2.SetActive(false);
             cuboSalida.SetActive(true);
+             // Resetear numCargas a 0 para la próxima ejecución
+            PlayerPrefs.SetInt("NumCargasEscena", 0);
+            PlayerPrefs.Save();
         }
     }
 
