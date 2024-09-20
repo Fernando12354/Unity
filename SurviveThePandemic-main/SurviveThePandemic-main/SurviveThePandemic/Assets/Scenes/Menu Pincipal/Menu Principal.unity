@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1696,6 +1696,7 @@ GameObject:
   - component: {fileID: 556838669}
   - component: {fileID: 556838668}
   - component: {fileID: 556838667}
+  - component: {fileID: 556838670}
   m_Layer: 5
   m_Name: Button Mision 4
   m_TagString: Untagged
@@ -1765,7 +1766,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 556838668}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 556838670}
+        m_TargetAssemblyTypeName: LoadLevelManager, Assembly-CSharp
+        m_MethodName: LoadSavedLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &556838668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1804,6 +1817,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556838665}
   m_CullTransparentMesh: 1
+--- !u!114 &556838670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556838665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f327119e0507c14f93fb3fa86741c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: ArchivoGuardadoNV4
 --- !u!1 &559778555
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,6 +2562,7 @@ GameObject:
   - component: {fileID: 630069582}
   - component: {fileID: 630069581}
   - component: {fileID: 630069580}
+  - component: {fileID: 630069583}
   m_Layer: 5
   m_Name: Button Mision 1
   m_TagString: Untagged
@@ -2605,7 +2632,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 630069581}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 630069583}
+        m_TargetAssemblyTypeName: LoadLevelManager, Assembly-CSharp
+        m_MethodName: LoadSavedLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &630069581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2626,7 +2665,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1446d273846c93347ad4277b092f7971, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15d4b1ea6efd15944aeddd0dfdbd7654, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2644,6 +2683,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630069578}
   m_CullTransparentMesh: 1
+--- !u!114 &630069583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630069578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f327119e0507c14f93fb3fa86741c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: ArchivoGuardadoNV1
 --- !u!1 &631323596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3923,6 +3975,7 @@ GameObject:
   - component: {fileID: 826330522}
   - component: {fileID: 826330521}
   - component: {fileID: 826330520}
+  - component: {fileID: 826330523}
   m_Layer: 5
   m_Name: Button Mision 3
   m_TagString: Untagged
@@ -3992,7 +4045,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 826330521}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 826330523}
+        m_TargetAssemblyTypeName: LoadLevelManager, Assembly-CSharp
+        m_MethodName: LoadSavedLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &826330521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4031,6 +4096,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826330518}
   m_CullTransparentMesh: 1
+--- !u!114 &826330523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826330518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f327119e0507c14f93fb3fa86741c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: ArchivoGuardadoNV3
 --- !u!1 &836338957
 GameObject:
   m_ObjectHideFlags: 0
@@ -6938,6 +7016,7 @@ GameObject:
   - component: {fileID: 1335974727}
   - component: {fileID: 1335974726}
   - component: {fileID: 1335974725}
+  - component: {fileID: 1335974728}
   m_Layer: 5
   m_Name: Button Mision 5
   m_TagString: Untagged
@@ -7007,7 +7086,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1335974726}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1335974728}
+        m_TargetAssemblyTypeName: LoadLevelManager, Assembly-CSharp
+        m_MethodName: LoadSavedLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1335974726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7046,6 +7137,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335974723}
   m_CullTransparentMesh: 1
+--- !u!114 &1335974728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335974723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f327119e0507c14f93fb3fa86741c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: ArchivoGuardadoNV5
 --- !u!1 &1343657754
 GameObject:
   m_ObjectHideFlags: 0
@@ -7058,6 +7162,7 @@ GameObject:
   - component: {fileID: 1343657758}
   - component: {fileID: 1343657757}
   - component: {fileID: 1343657756}
+  - component: {fileID: 1343657759}
   m_Layer: 5
   m_Name: Button Mision 2
   m_TagString: Untagged
@@ -7127,7 +7232,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1343657757}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1343657759}
+        m_TargetAssemblyTypeName: LoadLevelManager, Assembly-CSharp
+        m_MethodName: LoadSavedLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1343657757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7148,7 +7265,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1446d273846c93347ad4277b092f7971, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 47959d3cd40e2a144a10a02c8a9ac359, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7166,6 +7283,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343657754}
   m_CullTransparentMesh: 1
+--- !u!114 &1343657759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343657754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f327119e0507c14f93fb3fa86741c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: ArchivoGuardadoNV2
 --- !u!1 &1373232354
 GameObject:
   m_ObjectHideFlags: 0
