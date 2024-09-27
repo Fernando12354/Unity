@@ -7,7 +7,7 @@ public class GenerarBurbujas : MonoBehaviour
     public GameObject burbujaPrefab; // Prefab de la burbuja
     public Canvas canvas; // Asignar el Canvas
     public int burbujasNecesarias = 50; // Número total de burbujas para cubrir las manos
-    private int burbujasInstanciadas = 0;
+    public int burbujasInstanciadas = 0;
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && EstaSobreLasManos())
