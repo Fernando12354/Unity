@@ -9,6 +9,8 @@ public class ControlUniversal : MonoBehaviour
     public GameObject cuboSalida;
     public  GameObject CanvasDialogosSecundarios;
 
+    public GameObject Pers1;
+
     void Start()
     {
         // Al iniciar la escena, cargar el estado de los cubos según el número de veces que se ha cargado la escena
@@ -33,12 +35,22 @@ public class ControlUniversal : MonoBehaviour
              if(CanvasDialogosSecundarios!=null){
                 CanvasDialogosSecundarios.SetActive(true);
             }
+
+            if(Pers1!=null){
+
+                Pers1.SetActive(true);
+
+            }
         }
         else if (numCargas == 1)
         {
 
             if(CanvasDialogosSecundarios!=null){
                 CanvasDialogosSecundarios.SetActive(false);
+            }
+
+             if(Pers1!=null){
+                Pers1.SetActive(false);
             }
             c1.SetActive(false);
             c2.SetActive(true);
@@ -48,6 +60,10 @@ public class ControlUniversal : MonoBehaviour
         {
              if(CanvasDialogosSecundarios!=null){
                 CanvasDialogosSecundarios.SetActive(false);
+            }
+
+             if(Pers1!=null){
+                Pers1.SetActive(false);
             }
             c1.SetActive(false);
             c2.SetActive(false);
