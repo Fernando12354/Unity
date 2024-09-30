@@ -71,4 +71,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel 2/Mapa Ciudad NV2.unity
     guid: 391e227e4cf14a84887b68a20c8e2dc3
+  - enabled: 1
+    path: Assets/Scenes/Nivel 2/Lavar las manos/Manos.unity
+    guid: 8d9da84f7cdaca64d91db7a936fc3424
+  - enabled: 1
+    path: Assets/Scenes/Nivel 2/Mapa Ciudad NV2 Cubrebocas.unity
+    guid: 90ecddcaf9d29344b82efc90e033e5c0
+  - enabled: 1
+    path: Assets/Scenes/Nivel3/PasilloCasaAlex.unity
+    guid: 9e5d005c789aa714a9e785ca938fb830
+  - enabled: 1
+    path: "Assets/Scenes/Nivel3/CuartoMam\xE1AlexPrueba1.unity"
+    guid: 327c2bbb73009854093705cf7a654fe5
+  - enabled: 1
+    path: Assets/Scenes/Nivel3/CuartoMamaAlex.unity
+    guid: a85297d5525b5004184d3a0a977f6427
+  - enabled: 1
+    path: Assets/Scenes/Nivel3/CocinaAlex.unity
+    guid: b74cebade708aa84e9c7f913a2b7e4af
   m_configObjects: {}

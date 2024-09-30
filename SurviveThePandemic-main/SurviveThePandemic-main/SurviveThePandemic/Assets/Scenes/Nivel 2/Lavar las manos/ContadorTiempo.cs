@@ -1,7 +1,8 @@
 using UnityEngine;
 using TMPro; // Importar TextMesh Pro
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
+
 
 public class ContadorTiempo : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ContadorTiempo : MonoBehaviour
     public GameObject pantallaDerrota;
     public GameObject juego;
     public int cantidadMaximaBurbujas = 10; // Número de burbujas necesarias para ganar
+    public string nombreSiguienteEscena; // Escena que se cambiará al ganar, ajustable desde el inspector
 
     private GenerarBurbujas generadorBurbujas; // Referencia al script de generación de burbujas
 
@@ -61,16 +63,25 @@ public class ContadorTiempo : MonoBehaviour
         Time.timeScale = 0f; // Pausa el juego
     }
 
+    // Función para reiniciar el juego, asignable desde el botón en el Inspector
     public void Reiniciar()
     {
         Time.timeScale = 1f; // Restablece el tiempo
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reinicia la escena actual
     }
 
-    public void Continuar()
+   public void Continuar()
+{
+    if (!string.IsNullOrEmpty(nombreSiguienteEscena))
     {
-        Time.timeScale = 1f; // Restablece el tiempo
-        SceneManager.LoadScene("NombreDeLaSiguienteEscena"); // Cambia a otra escena
+        Time.timeScale = 1f; // Restablece el tiempo antes de cargar la nueva escena
+        SceneManager.LoadScene(nombreSiguienteEscena); // Cambia a la siguiente escena
+    }
+    else
+    {
+        Debug.LogWarning("El nombre de la siguiente escena no ha sido asignado.");
     }
 }
 
+
+}

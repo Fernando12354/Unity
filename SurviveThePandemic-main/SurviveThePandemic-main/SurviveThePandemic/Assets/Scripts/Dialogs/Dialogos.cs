@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Dialogos : MonoBehaviour
 {
+    public GameObject canvasGuia; // Canvas Guia
     public TextMeshProUGUI textD;
     [TextArea(30, 3)]
     public string[] parrafos;
@@ -20,6 +21,8 @@ public class Dialogos : MonoBehaviour
     public GameObject botonLeer;
     public Button buttonChange;
 
+    
+
     private Coroutine currentCoroutine;
 
     void Start()
@@ -29,6 +32,7 @@ public class Dialogos : MonoBehaviour
         botonLeer.SetActive(true);
         panelDialogo.SetActive(true);
         currentCoroutine = StartCoroutine(TextDialogo());
+        canvasGuia.SetActive(false);
     }
 
     void Update()
@@ -104,6 +108,7 @@ public class Dialogos : MonoBehaviour
     {
         panelDialogo.SetActive(false);
         botonLeer.SetActive(false);
+        canvasGuia.SetActive(true);
     }
 }
 

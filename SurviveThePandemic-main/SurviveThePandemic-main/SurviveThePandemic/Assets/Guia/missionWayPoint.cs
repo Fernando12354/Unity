@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class missionWayPoint : MonoBehaviour
 {
-
     // Indicator icon
     public Image img;
     // The target (location, enemy, etc..)
@@ -18,50 +17,59 @@ public class missionWayPoint : MonoBehaviour
 
     public Camera mainCamera;
 
-    //MODIFIED
+    public float hideDistance = 2f; // Distancia para ocultar los indicadores
 
     private void Update()
     {
-        // Giving limits to the icon so it sticks on the screen
-        // Below calculations witht the assumption that the icon anchor point is in the middle
-        // Minimum X position: half of the icon width
+        // Calcula la distancia entre el jugador y el objetivo
+        float distanceToTarget = Vector3.Distance(target.position, player.transform.position);
+
+        // Si la distancia es menor o igual a 'hideDistance' (2 metros por defecto), ocultar los indicadores
+        if (distanceToTarget <= hideDistance)
+        {
+            // Desactivar el ícono y el texto de la distancia
+            img.gameObject.SetActive(false);
+            meter.gameObject.SetActive(false);
+            return; // Salir del método para evitar ejecutar el resto del código
+        }
+        else
+        {
+            // Asegurarse de que los indicadores estén activados si la distancia es mayor a 'hideDistance'
+            img.gameObject.SetActive(true);
+            meter.gameObject.SetActive(true);
+        }
+
+        // Dar límites al ícono para que se quede dentro de la pantalla
         float minX = img.GetPixelAdjustedRect().width / 2;
-        // Maximum X position: screen width - half of the icon width
         float maxX = Screen.width - minX;
 
-        // Minimum Y position: half of the height
         float minY = img.GetPixelAdjustedRect().height / 2;
-        // Maximum Y position: screen height - half of the icon height
         float maxY = Screen.height - minY;
 
-        // Temporary variable to store the converted position from 3D world point to 2D screen point
+        // Convertir la posición del objetivo de 3D a 2D en la pantalla
         Vector2 pos = Camera.main.WorldToScreenPoint(target.position + offset);
 
-        // Check if the target is behind us, to only show the icon once the target is in front
+        // Verifica si el objetivo está detrás del jugador
         if (Vector3.Dot((target.position - player.transform.position).normalized, player.transform.forward) < 0)
         {
-            // Check if the target is on the left side of the screen
             if (pos.x < Screen.width / 2)
             {
-                // Place it on the right (Since it's behind the player, it's the opposite)
                 pos.x = maxX;
             }
             else
             {
-                // Place it on the left side
                 pos.x = minX;
             }
         }
 
-        // Limit the X and Y positions
+        // Limitar las posiciones X e Y
         pos.x = Mathf.Clamp(pos.x, minX, maxX);
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
-        // Update the marker's position
+        // Actualizar la posición del ícono
         img.transform.position = pos;
-        // Change the meter text to the distance with the meter unit 'm'
- //       meter.text = Vector3.Distance((int)target.position, player.transform.position).ToString()+"m";
-        meter.text = ((int)Vector3.Distance(target.position, player.transform.position)).ToString() + "m";
+
+        // Actualizar el texto con la distancia en metros
+        meter.text = ((int)distanceToTarget).ToString() + "m";
     }
 }
-
