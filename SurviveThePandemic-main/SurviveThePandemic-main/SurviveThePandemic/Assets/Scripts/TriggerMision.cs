@@ -6,6 +6,9 @@ public class TriggerMision : MonoBehaviour
 {
     public Canvas canvasDecision; // Canvas con los dos botones de decisión
     public Canvas canvasMisionCompletada; // Canvas que indica que la misión fue completada
+    public GameObject canvasguia;
+    public string sceneToLoad; // Nombre de la escena a cargar (se puede modificar en el inspector)
+
     private bool canvasDecisionActive = false; // Para verificar si el CanvasDecision está activo
 
     private void Start()
@@ -18,6 +21,7 @@ public class TriggerMision : MonoBehaviour
     {
         if (other.CompareTag("Player")) // Asegurarse de que solo el jugador active el canvas
         {
+            canvasguia.SetActive(false);
             canvasDecision.gameObject.SetActive(true); // Mostrar el Canvas de decisión
             canvasDecisionActive = true;
         }
@@ -39,9 +43,8 @@ public class TriggerMision : MonoBehaviour
     {
         if (canvasMisionCompletada.gameObject.activeSelf && Input.GetKeyDown(KeyCode.Return)) // Si el canvas de misión está activo y se presiona Enter
         {
-            // Cargar la siguiente escena (asegúrate de agregar la escena en la configuración de Build Settings)
-            SceneManager.LoadScene("Sala de Alex");
+            // Cargar la siguiente escena utilizando el nombre especificado en el inspector
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
 }
-

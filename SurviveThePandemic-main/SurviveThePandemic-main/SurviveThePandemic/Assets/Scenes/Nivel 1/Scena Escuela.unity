@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 122815928}
-  m_IndirectSpecularColor: {r: 0.43766385, g: 0.4855352, b: 0.56581295, a: 1}
+  m_IndirectSpecularColor: {r: 0.43766433, g: 0.48553574, b: 0.5658142, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -34944,6 +34944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasDecision: {fileID: 1016228373}
   canvasMisionCompletada: {fileID: 1847706412}
+  sceneToLoad: Sala de Alex
 --- !u!1001 &1358127320
 PrefabInstance:
   m_ObjectHideFlags: 0
