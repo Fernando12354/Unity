@@ -100,5 +100,10 @@ public class AhorcadoGame : MonoBehaviour
             }
         }
     }
+
+     public void IniciarJuegoAutomáticamente()
+    {
+        ReiniciarJuego(); // Reinicia y carga una nueva palabra cuando el jugador entra en la zona
+    }
 }
 

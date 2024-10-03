@@ -15,8 +15,7 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 1
     motionNodeName: 
-    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
-      human bone 'Hips' not found\n"
+    rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -73,7 +72,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
+  referencedClips:
+  - faff48b936534414d93d23e7ffc6485e
+  - c35f1293da68399479571128fa7829cc
+  - 8274e5514847b5b42a556052790c8ec3
+  - ddb5044e06b5cc9408ec57271b7554d9
   importAnimation: 1
   humanDescription:
     serializedVersion: 3

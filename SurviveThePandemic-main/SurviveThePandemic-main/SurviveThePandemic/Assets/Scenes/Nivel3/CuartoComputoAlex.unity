@@ -1321,6 +1321,63 @@ RectTransform:
   m_AnchoredPosition: {x: -180, y: -60}
   m_SizeDelta: {x: 400, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &172342962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 172342965}
+  - component: {fileID: 172342964}
+  - component: {fileID: 172342963}
+  m_Layer: 0
+  m_Name: ZonaDeActivacion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &172342963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172342962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3a999d4405194f84020c77b2277f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &172342964
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172342962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.754005, y: 4.1459, z: 7.646306}
+  m_Center: {x: -4.2641745, y: 2.0871105, z: -12.33729}
+--- !u!4 &172342965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172342962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &183610542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5373,15 +5430,15 @@ MonoBehaviour:
   botonReiniciar: {fileID: 1782509844}
   panelFelicidades: {fileID: 252261059}
   panelGameOver: {fileID: 1320241936}
-  guionPrefab: {fileID: 0}
-  panelGuiones: {fileID: 0}
+  guionPrefab: {fileID: 3009392884462964396, guid: e929b25d50a6f514e9504ffb5986d266, type: 3}
+  panelGuiones: {fileID: 771133986}
   partesAhorcado:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1578990715}
+  - {fileID: 800232534}
+  - {fileID: 263861950}
+  - {fileID: 1785161930}
+  - {fileID: 10423516}
+  - {fileID: 1224186153}
 --- !u!4 &881845530
 Transform:
   m_ObjectHideFlags: 0
@@ -5478,7 +5535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &886743034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12148,7 +12205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1782509842}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 881845529}
+        m_TargetAssemblyTypeName: AhorcadoGame, Assembly-CSharp
+        m_MethodName: ReiniciarJuego
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1785161928
 GameObject:
   m_ObjectHideFlags: 0
