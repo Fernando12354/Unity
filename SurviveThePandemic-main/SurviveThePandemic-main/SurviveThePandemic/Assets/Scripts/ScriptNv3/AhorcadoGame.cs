@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class AhorcadoGame : MonoBehaviour
 {
+    public Canvas canvasJuego; // Canvas del juego del ahorcado
     public Text palabraText;
     public Text mensajeFinalText;
     public Button botonReiniciar;
@@ -24,7 +25,7 @@ public class AhorcadoGame : MonoBehaviour
 
     private void Start()
     {
-        ReiniciarJuego();
+        canvasJuego.gameObject.SetActive(false); // Asegura que el canvas esté inactivo al inicio
         botonReiniciar.onClick.AddListener(ReiniciarJuego);
     }
 
@@ -56,16 +57,27 @@ public class AhorcadoGame : MonoBehaviour
         palabraText.text = ""; // Limpiar el texto de la palabra oculta
     }
 
-    private void CrearGuiones(int cantidad)
+   private void CrearGuiones(int cantidad)
+{
+    for (int i = 0; i < cantidad; i++)
     {
-        for (int i = 0; i < cantidad; i++)
-        {
-            // Instanciar un nuevo guion en el panel de guiones
-            GameObject nuevoGuion = Instantiate(guionPrefab, panelGuiones);
-            nuevoGuion.GetComponent<GuionReceptor>().letraCorrecta = palabraOculta[i]; // Asignar la letra correcta al guion
-            guiones.Add(nuevoGuion); // Agregar el guion a la lista
-        }
+        // Instanciar un nuevo guion en el panel de guiones
+        GameObject nuevoGuion = Instantiate(guionPrefab, panelGuiones);
+        nuevoGuion.GetComponent<GuionReceptor>().letraCorrecta = palabraOculta[i]; // Asignar la letra correcta al guion
+        guiones.Add(nuevoGuion); // Agregar el guion a la lista
     }
+
+    // Forzar el Layout Group a reestructurarse
+    LayoutRebuilder.ForceRebuildLayoutImmediate(panelGuiones.GetComponent<RectTransform>());
+
+    // Ajustar el espaciado entre guiones
+    HorizontalLayoutGroup layoutGroup = panelGuiones.GetComponent<HorizontalLayoutGroup>();
+    if (layoutGroup != null)
+    {
+        layoutGroup.spacing = 0; // Ajusta esto a un valor más bajo si es necesario
+    }
+}
+
 
     public void IntentarLetra(bool acierto)
     {
@@ -101,9 +113,8 @@ public class AhorcadoGame : MonoBehaviour
         }
     }
 
-     public void IniciarJuegoAutomáticamente()
+    public void IniciarJuegoAutomáticamente()
     {
         ReiniciarJuego(); // Reinicia y carga una nueva palabra cuando el jugador entra en la zona
     }
 }
-

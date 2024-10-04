@@ -4674,6 +4674,7 @@ GameObject:
   - component: {fileID: 771133986}
   - component: {fileID: 771133988}
   - component: {fileID: 771133987}
+  - component: {fileID: 771133989}
   m_Layer: 0
   m_Name: PanelGuiones
   m_TagString: Untagged
@@ -4738,6 +4739,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771133985}
   m_CullTransparentMesh: 1
+--- !u!114 &771133989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771133985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &794597869
 GameObject:
   m_ObjectHideFlags: 0
@@ -5425,6 +5452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e704a09b5ed06c04987f953b263466c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasJuego: {fileID: 886743036}
   palabraText: {fileID: 98907063}
   mensajeFinalText: {fileID: 1347944311}
   botonReiniciar: {fileID: 1782509844}
@@ -5446,12 +5474,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881845528}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &883072350 stripped
 GameObject:
@@ -5513,7 +5541,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &886743033
 GameObject:
@@ -5535,7 +5563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &886743034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12781,7 +12809,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870727372}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1870727374
 Camera:
   m_ObjectHideFlags: 0

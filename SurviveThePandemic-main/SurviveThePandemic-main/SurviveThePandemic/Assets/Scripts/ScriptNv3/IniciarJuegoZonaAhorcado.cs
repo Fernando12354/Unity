@@ -21,6 +21,7 @@ public class IniciarJuegoZonaAhorcado : MonoBehaviour
             if (ahorcadoGame != null)
             {
                 ahorcadoGame.IniciarJuegoAutomáticamente(); // Llama al método para iniciar el juego
+                ahorcadoGame.canvasJuego.gameObject.SetActive(true);
                 Debug.Log("El juego de ahorcado ha comenzado."); // Confirma que el juego se ha iniciado
             }
             else
