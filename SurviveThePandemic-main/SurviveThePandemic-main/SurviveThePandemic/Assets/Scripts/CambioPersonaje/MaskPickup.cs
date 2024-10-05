@@ -7,6 +7,14 @@ public class MaskPickup : MonoBehaviour
     public GameObject playerWithMask;  // El modelo del personaje con cubrebocas
     public float maskDuration = 15f;   // Duración en segundos para que el personaje use el cubrebocas
     public float yOffset = 0.1f;       // Offset en Y para ajustar altura si es necesario
+    public CoroutineHandler coroutineHandler; // Referencia al manejador de corrutinas
+
+    private void Start()
+    {
+        // Asegúrate de que el modelo original esté activo y el modelo con cubrebocas esté desactivado al inicio
+        playerOriginal.SetActive(true);
+        playerWithMask.SetActive(false);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,13 +26,16 @@ public class MaskPickup : MonoBehaviour
             // Cambia el modelo del jugador al que tiene cubrebocas
             ChangePlayerModel(true);
 
-            // Comienza la corrutina para cambiar el modelo de vuelta después del tiempo establecido
-            StartCoroutine(RevertToOriginalAfterDelay());
+            // Desactiva el objeto del cubrebocas inmediatamente
+            gameObject.SetActive(false);
+
+            // Llama al manejador para iniciar la corrutina
+            coroutineHandler.StartRevertCoroutine(this);
         }
     }
 
     // Método para cambiar entre los dos modelos de personaje
-    void ChangePlayerModel(bool useMask)
+    public void ChangePlayerModel(bool useMask)
     {
         if (useMask)
         {
@@ -74,23 +85,5 @@ public class MaskPickup : MonoBehaviour
             playerWithMask.SetActive(false);
             playerOriginal.SetActive(true);
         }
-    }
-
-    // Corrutina que espera el tiempo especificado y luego cambia de nuevo al modelo original
-    IEnumerator RevertToOriginalAfterDelay()
-    {
-        Debug.Log("Esperando para restaurar el modelo original.");
-        // Desactiva el objeto del cubrebocas después de que la corrutina termine su tarea
-         gameObject.SetActive(false);
-        // Espera el tiempo especificado
-        yield return new WaitForSeconds(maskDuration);
-
-        // Cambia de nuevo al modelo original
-        ChangePlayerModel(false);
-
-        Debug.Log("Modelo restaurado al original después de " + maskDuration + " segundos.");
-
-        
-       
     }
 }
