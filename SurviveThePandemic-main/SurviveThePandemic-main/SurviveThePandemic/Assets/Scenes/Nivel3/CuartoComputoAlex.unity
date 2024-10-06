@@ -11132,6 +11132,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647811461}
   m_CullTransparentMesh: 1
+--- !u!1 &1656080057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1656080059}
+  - component: {fileID: 1656080058}
+  m_Layer: 0
+  m_Name: Dialogs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1656080058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656080057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4a056fe4dc0794f848ceb25fc33ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogText: {fileID: 0}
+  characterImage: {fileID: 0}
+  dialogBox: {fileID: 0}
+  characterImages:
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: ad262aa1386541c4fb05fa84b367a705, type: 3}
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: 906b395fc2260ad4f941d14c3f494a75, type: 3}
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: bc0785306f024e544949cb50247326d3, type: 3}
+  - {fileID: 21300000, guid: 8fbf18638cda01d40b7ba7a8e929c3fb, type: 3}
+  - {fileID: 21300000, guid: 4f95449b9807c1c4bae6449bfcce01f3, type: 3}
+  dialogTexts:
+  - 'Maestra: Hola Alex te estabamos esperando'
+  - 'Alex: Hola Maestra perdon ammm... no tenia Internet'
+  - Maestra:Esta bien Alex, Bueno Hoy hablaremos del Covid-19
+  - "Maestra:El COVID-19 es una enfermedad causada por un virus llamado coronavirus.
+    Este virus puede afectar nuestras v\xEDas respiratorias, como la garganta y los
+    pulmones. Algunas personas se sienten como si tuvieran un resfriado, pero otras
+    pueden enfermarse m\xE1s gravemente."
+  - "Juan:\xBFY c\xF3mo se transmite ese virus, maestra?"
+  - "Maestra:Muy buena pregunta. El COVID-19 se transmite de una persona a otra a
+    trav\xE9s de gotitas peque\xF1as que salen de nuestra boca o nariz cuando hablamos,
+    tosemos o estornudamos. Si alguien con el virus est\xE1 cerca y no tiene cubrebocas,
+    esas gotitas pueden llegar a otra persona y contagiarla."
+  - "Susan:\xBFEso significa que tenemos que usar cubrebocas todo el tiempo?"
+  - "Maestra:\xA1Exactamente! Usar cubrebocas es una de las maneras m\xE1s importantes
+    de protegernos. El cubrebocas ayuda a que las gotitas no se dispersen por el
+    aire y lleguen a otras personas. Tambi\xE9n evita que nosotros inhalemos esas
+    gotitas de otras personas. Por eso, siempre debemos usarlo cuando estemos en
+    lugares p\xFAblicos o cerca de otras personas."
+  - "Maestra:Tambien, Debemos lavarnos las manos con agua y jab\xF3n por al menos
+    20 segundos, especialmente despu\xE9s de salir a la calle, antes de comer, o
+    despu\xE9s de toser o estornudar. Si no tenemos agua y jab\xF3n, podemos usar
+    gel desinfectante con al menos un 60% de alcohol."
+  - "Maestra:Y no olvidemos que debemos desinfectar las superficies que tocamos con
+    frecuencia, como mesas, tel\xE9fonos y juguetes. El virus puede vivir en estas
+    superficies por un tiempo, as\xED que limpiarlas regularmente ayuda a evitar
+    que se propague."
+--- !u!4 &1656080059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656080057}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1666192894
 GameObject:
   m_ObjectHideFlags: 0
