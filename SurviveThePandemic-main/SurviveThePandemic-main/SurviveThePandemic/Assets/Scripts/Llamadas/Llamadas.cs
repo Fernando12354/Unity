@@ -8,8 +8,8 @@ using TMPro;
 
 public class Llamadas : MonoBehaviour
 {
-    private bool callAnswer = false;
-    private bool callSound = false;
+    public bool callAnswer = false;
+    public bool callSound = false;
 
     [Header("Notificaciones")]
     public GameObject Notificacion;
