@@ -1,59 +1,47 @@
 using UnityEngine;
-using System.Collections; // Required for IEnumerator
+using System.Collections;
 
 public class SequentialCanvasController : MonoBehaviour
 {
-    public GameObject[] canvases;  // Los tres canvases que quieres activar secuencialmente
-    private int currentCanvasIndex = 0;
+    public DisplayMessage displayMessage;      // Referencia al componente DisplayMessage
+    public DialogManagerSinVida dialogManager; // Referencia al componente DialogManagerSinVida
+    public int dialogIndex = 0;                // Índice del diálogo a iniciar
+    public GameObject canvasNombreMision4;     // Referencia al Canvas NombreMision4
+    public GameObject canvasDialogosNoticieros;// Referencia al Canvas CanvasDialogosNoticieros
+    public GameObject canvasCall;              // Referencia al Canvas CanvasCall
+    public Llamadas llamadas;                  // Referencia al script de llamadas
 
-    private void Start()
+    private bool isMessageComplete = false;
+
+    void Update()
     {
-        // Asegurarte de que todos los Canvas excepto el primero estén desactivados
-        for (int i = 0; i < canvases.Length; i++)
+        // Si el mensaje ya se ha mostrado y el diálogo aún no ha comenzado
+        if (!displayMessage.messageText.gameObject.activeSelf && !isMessageComplete)
         {
-            canvases[i].SetActive(i == currentCanvasIndex);
-        }
-
-        // Iniciar el primer Canvas
-        StartCoroutine(StartCanvasSequence());
-    }
-
-    private IEnumerator StartCanvasSequence()
-    {
-        // Activar y esperar a que cada Canvas termine antes de pasar al siguiente
-        for (int i = 0; i < canvases.Length; i++)
-        {
-            canvases[i].SetActive(true);
-
-            // Espera la finalización del script asociado antes de continuar con el siguiente Canvas
-            yield return new WaitUntil(() => IsCanvasScriptComplete(canvases[i]));
-
-            // Desactivar el Canvas actual antes de activar el siguiente
-            canvases[i].SetActive(false);
+            isMessageComplete = true; // Marca el mensaje como completo
+            StartNextDialog();        // Inicia el diálogo
         }
     }
 
-    private bool IsCanvasScriptComplete(GameObject canvas)
+    void StartNextDialog()
     {
-        // Aquí implementas la lógica para verificar si el script asociado a cada Canvas ha terminado.
-        // Esta función puede verificar que los diálogos hayan terminado o que una acción específica haya ocurrido.
-        
-        if (canvas.GetComponent<DisplayMessage>() != null)
-        {
-            return !canvas.GetComponent<DisplayMessage>().messageText.gameObject.activeSelf;
-        }
-        else if (canvas.GetComponent<DialogManagerSinVida>() != null)
-        {
-            return !canvas.GetComponent<DialogManagerSinVida>().IsDialogActive();
-        }
-        else if (canvas.GetComponent<Llamadas>() != null)
-        {
-            // Verificar si la llamada ha sido contestada y terminada
-            return canvas.GetComponent<Llamadas>().callAnswer;
-        }
+        // Desactiva el canvas NombreMision4 y activa CanvasDialogosNoticieros
+        canvasNombreMision4.SetActive(false);      // Desactiva NombreMision4
+        canvasDialogosNoticieros.SetActive(true);  // Activa CanvasDialogosNoticieros
 
-        // En caso de que no haya un script específico, devuelve false
-        return false;
+        dialogManager.StartDialog(dialogIndex);    // Inicia el diálogo con el índice especificado
+    }
+
+    public void EndCurrentDialog()
+    {
+        // Llamado cuando termina el último diálogo
+        Debug.Log("Diálogo finalizado, activando siguiente script...");
+
+        // Desactiva el CanvasDialogosNoticieros y activa el CanvasCall
+        canvasDialogosNoticieros.SetActive(false);  // Desactiva CanvasDialogosNoticieros
+        canvasCall.SetActive(true);                 // Activa CanvasCall
+
+        // Inicia el siguiente script de llamadas
+        StartCoroutine(llamadas.StartCall());
     }
 }
-
