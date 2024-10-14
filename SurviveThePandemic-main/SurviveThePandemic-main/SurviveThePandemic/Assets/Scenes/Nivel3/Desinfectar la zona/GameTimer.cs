@@ -15,7 +15,7 @@ public class GameTimer : MonoBehaviour
     public int sortingOrderOnLose = 10; // Valor para el orden de capas cuando se pierde
 
     private int objectsToClean; // Cantidad de objetos a limpiar
-    private bool gameEnded = false; // Estado del juego
+    public bool gameEnded = false; // Estado del juego
 
     void Start()
     {

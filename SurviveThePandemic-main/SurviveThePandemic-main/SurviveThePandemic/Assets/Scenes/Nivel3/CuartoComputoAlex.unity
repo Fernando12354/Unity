@@ -1889,11 +1889,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 172342962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36f3a999d4405194f84020c77b2277f9, type: 3}
+  m_Script: {fileID: 11500000, guid: dbbe8b13163acf8449b9ea1709968573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ahorcado: {fileID: 976314827}
-  escenario: {fileID: 1824383397}
+  dialogManager: {fileID: 2058195930}
+  objectiveController: {fileID: 593302118}
+  objectiveName: Completa Tus Clases
+  firstDialogIndex: 0
 --- !u!65 &172342964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1919,7 +1921,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1824383398}
-  m_RootOrder: 39
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &208288127
 BoxCollider:
@@ -3602,14 +3604,14 @@ RectTransform:
   m_GameObject: {fileID: 360153121}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 1815651579}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -163}
+  m_AnchoredPosition: {x: 0, y: -690}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &360153123
@@ -3641,8 +3643,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3659,8 +3661,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3695,7 +3697,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -164.37793, y: 0, z: -160.17215, w: -16.01824}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6043,7 +6045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.000015259}
+  m_AnchoredPosition: {x: 0, y: 307}
   m_SizeDelta: {x: 640, y: 480}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &682975392
@@ -6382,8 +6384,8 @@ RectTransform:
   m_Father: {fileID: 1517615750}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7556,8 +7558,8 @@ RectTransform:
   m_Father: {fileID: 1016660606}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7734,7 +7736,7 @@ Transform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1824383398}
-  m_RootOrder: 38
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &883072354
 BoxCollider:
@@ -7791,7 +7793,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1824383398}
-  m_RootOrder: 37
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &886743033
 GameObject:
@@ -11939,7 +11941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1345936286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12024,7 +12026,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345936285}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
@@ -13417,7 +13419,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14803,7 +14805,7 @@ RectTransform:
   m_Children:
   - {fileID: 1815651579}
   m_Father: {fileID: 1824383398}
-  m_RootOrder: 40
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15313,116 +15315,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647811461}
   m_CullTransparentMesh: 1
---- !u!1 &1656080057
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1656080059}
-  - component: {fileID: 1656080058}
-  m_Layer: 0
-  m_Name: Dialogs
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1656080058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1656080057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e4a056fe4dc0794f848ceb25fc33ea5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogText: {fileID: 360153123}
-  characterImage: {fileID: 682975392}
-  dialogBox: {fileID: 1815651578}
-  characterImages:
-  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
-  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
-  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
-  - {fileID: 21300000, guid: ad262aa1386541c4fb05fa84b367a705, type: 3}
-  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
-  - {fileID: 21300000, guid: 906b395fc2260ad4f941d14c3f494a75, type: 3}
-  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
-  - {fileID: 21300000, guid: bc0785306f024e544949cb50247326d3, type: 3}
-  - {fileID: 21300000, guid: 8fbf18638cda01d40b7ba7a8e929c3fb, type: 3}
-  - {fileID: 21300000, guid: 4f95449b9807c1c4bae6449bfcce01f3, type: 3}
-  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
-  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
-  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
-  - {fileID: 21300000, guid: 2a1b9f1df2a3b1b48abd497a7b6f8a57, type: 3}
-  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
-  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
-  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
-  dialogTexts:
-  - 'Maestra: Hola Alex te estabamos esperando'
-  - 'Alex: Hola Maestra perdon ammm... no tenia Internet'
-  - Maestra:Esta bien Alex, Bueno Hoy hablaremos del Covid-19
-  - "Maestra:El COVID-19 es una enfermedad causada por un virus llamado coronavirus.
-    Este virus puede afectar nuestras v\xEDas respiratorias, como la garganta y los
-    pulmones. Algunas personas se sienten como si tuvieran un resfriado, pero otras
-    pueden enfermarse m\xE1s gravemente."
-  - "Juan:\xBFY c\xF3mo se transmite ese virus, maestra?"
-  - "Maestra:Muy buena pregunta. El COVID-19 se transmite de una persona a otra a
-    trav\xE9s de gotitas peque\xF1as que salen de nuestra boca o nariz cuando hablamos,
-    tosemos o estornudamos. Si alguien con el virus est\xE1 cerca y no tiene cubrebocas,
-    esas gotitas pueden llegar a otra persona y contagiarla."
-  - "Susan:\xBFEso significa que tenemos que usar cubrebocas todo el tiempo?"
-  - "Maestra:\xA1Exactamente! Usar cubrebocas es una de las maneras m\xE1s importantes
-    de protegernos. El cubrebocas ayuda a que las gotitas no se dispersen por el
-    aire y lleguen a otras personas. Tambi\xE9n evita que nosotros inhalemos esas
-    gotitas de otras personas. Por eso, siempre debemos usarlo cuando estemos en
-    lugares p\xFAblicos o cerca de otras personas."
-  - "Maestra:Tambien, Debemos lavarnos las manos con agua y jab\xF3n por al menos
-    20 segundos, especialmente despu\xE9s de salir a la calle, antes de comer, o
-    despu\xE9s de toser o estornudar. Si no tenemos agua y jab\xF3n, podemos usar
-    gel desinfectante con al menos un 60% de alcohol."
-  - "Maestra:Y no olvidemos que debemos desinfectar las superficies que tocamos con
-    frecuencia, como mesas, tel\xE9fonos y juguetes. El virus puede vivir en estas
-    superficies por un tiempo, as\xED que limpiarlas regularmente ayuda a evitar
-    que se propague."
-  - "Tommy:\xBFY qu\xE9 pasa con los alimentos? \xBFTambi\xE9n se pueden contagiar
-    con el virus?"
-  - "Maestra: No se preocupen, chicos. El virus no se transmite a trav\xE9s de la
-    comida, pero es importante que siempre lavemos y desinfectemos bien los alimentos
-    antes de comerlos o cocinarlos. Adem\xE1s, debemos lavarnos las manos antes y
-    despu\xE9s de tocar alimentos para mantener todo lo m\xE1s limpio posible."
-  - "Alex: \xBFY c\xF3mo podemos protegernos a\xFAn m\xE1s en el futuro?"
-  - "Maestra: \xA1Buena pregunta! En el futuro, algo muy importante ser\xE1 la vacunaci\xF3n.
-    Las vacunas ayudan a nuestro cuerpo a estar preparado para defenderse si entra
-    en contacto con el virus. Cuando muchas personas se vacunan, el virus tiene menos
-    oportunidades de seguir contagiando."
-  - "Alex: \xA1Ah! Entonces, si nos vacunamos, ayudamos a que todos estemos m\xE1s
-    protegidos."
-  - "Maestra: \xA1As\xED es! Pero hasta que tengamos la vacuna, lo mejor que podemos
-    hacer es seguir las medidas de seguridad: usar cubrebocas, lavarnos las manos,
-    mantener distancia de otras personas y desinfectar todo lo que tocamos."
-  - "Maestra: Bueno chicos Ahora ya que saben esto vamos a jugar un peque\xF1o juego
-    para ver si aprendieron correctamente todo, el juego sera el ahorcado, estan
-    listos, vamos!!"
---- !u!4 &1656080059
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1656080057}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1824383398}
-  m_RootOrder: 41
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1659578717
 GameObject:
   m_ObjectHideFlags: 0
@@ -15871,8 +15763,8 @@ RectTransform:
   m_Father: {fileID: 1766684137}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -17241,9 +17133,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 976314828}
-        m_TargetAssemblyTypeName: MainScript, Assembly-CSharp
-        m_MethodName: Continuar
+      - m_Target: {fileID: 2058195930}
+        m_TargetAssemblyTypeName: DialogManager3, Assembly-CSharp
+        m_MethodName: ReturnToEscenario
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17510,12 +17402,11 @@ Transform:
   - {fileID: 593302119}
   - {fileID: 886743037}
   - {fileID: 1463846837}
-  - {fileID: 2045263466}
   - {fileID: 886498204}
   - {fileID: 881845530}
   - {fileID: 172342965}
   - {fileID: 1617244232}
-  - {fileID: 1656080059}
+  - {fileID: 2058195929}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19433,72 +19324,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &2045263463
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2045263466}
-  - component: {fileID: 2045263465}
-  - component: {fileID: 2045263464}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2045263464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045263463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &2045263465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045263463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &2045263466
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045263463}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1824383398}
-  m_RootOrder: 36
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2047816125
 GameObject:
   m_ObjectHideFlags: 0
@@ -19713,6 +19538,118 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050272763}
   m_CullTransparentMesh: 1
+--- !u!1 &2058195928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2058195929}
+  - component: {fileID: 2058195930}
+  m_Layer: 0
+  m_Name: Dialogos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2058195929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058195928}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1824383398}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2058195930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058195928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffca8aab2713fb4da80011750879175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogText: {fileID: 360153123}
+  characterImage: {fileID: 682975392}
+  dialogBox: {fileID: 1815651578}
+  escenario: {fileID: 1824383397}
+  ahorcado: {fileID: 976314827}
+  characterImages:
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: ad262aa1386541c4fb05fa84b367a705, type: 3}
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: 906b395fc2260ad4f941d14c3f494a75, type: 3}
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: bc0785306f024e544949cb50247326d3, type: 3}
+  - {fileID: 21300000, guid: 8fbf18638cda01d40b7ba7a8e929c3fb, type: 3}
+  - {fileID: 21300000, guid: 4f95449b9807c1c4bae6449bfcce01f3, type: 3}
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: 2a1b9f1df2a3b1b48abd497a7b6f8a57, type: 3}
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  - {fileID: 21300000, guid: c635d5eb7a3a92a4a8b2697a2cbe6362, type: 3}
+  dialogTexts:
+  - 'Maestra: Hola Alex te estabamos esperando'
+  - 'Alex: Hola Maestra perdon ammm... no tenia Internet'
+  - Maestra:Esta bien Alex, Bueno Hoy hablaremos del Covid-19
+  - "Maestra:El COVID-19 es una enfermedad causada por un virus llamado coronavirus.
+    Este virus puede afectar nuestras v\xEDas respiratorias, como la garganta y los
+    pulmones. Algunas personas se sienten como si tuvieran un resfriado, pero otras
+    pueden enfermarse m\xE1s gravemente."
+  - "Juan:\xBFY c\xF3mo se transmite ese virus, maestra?"
+  - "Maestra:Muy buena pregunta. El COVID-19 se transmite de una persona a otra a
+    trav\xE9s de gotitas peque\xF1as que salen de nuestra boca o nariz cuando hablamos,
+    tosemos o estornudamos. Si alguien con el virus est\xE1 cerca y no tiene cubrebocas,
+    esas gotitas pueden llegar a otra persona y contagiarla."
+  - "Susan:\xBFEso significa que tenemos que usar cubrebocas todo el tiempo?"
+  - "Maestra:\xA1Exactamente! Usar cubrebocas es una de las maneras m\xE1s importantes
+    de protegernos. El cubrebocas ayuda a que las gotitas no se dispersen por el
+    aire y lleguen a otras personas. Tambi\xE9n evita que nosotros inhalemos esas
+    gotitas de otras personas. Por eso, siempre debemos usarlo cuando estemos en
+    lugares p\xFAblicos o cerca de otras personas."
+  - "Maestra:Tambien, Debemos lavarnos las manos con agua y jab\xF3n por al menos
+    20 segundos, especialmente despu\xE9s de salir a la calle, antes de comer, o
+    despu\xE9s de toser o estornudar. Si no tenemos agua y jab\xF3n, podemos usar
+    gel desinfectante con al menos un 60% de alcohol."
+  - "Maestra:Y no olvidemos que debemos desinfectar las superficies que tocamos con
+    frecuencia, como mesas, tel\xE9fonos y juguetes. El virus puede vivir en estas
+    superficies por un tiempo, as\xED que limpiarlas regularmente ayuda a evitar
+    que se propague."
+  - "Tommy:\xBFY qu\xE9 pasa con los alimentos? \xBFTambi\xE9n se pueden contagiar
+    con el virus?"
+  - "Maestra: No se preocupen, chicos. El virus no se transmite a trav\xE9s de la
+    comida, pero es importante que siempre lavemos y desinfectemos bien los alimentos
+    antes de comerlos o cocinarlos. Adem\xE1s, debemos lavarnos las manos antes y
+    despu\xE9s de tocar alimentos para mantener todo lo m\xE1s limpio posible."
+  - "Alex: \xBFY c\xF3mo podemos protegernos a\xFAn m\xE1s en el futuro?"
+  - "Maestra: \xA1Buena pregunta! En el futuro, algo muy importante ser\xE1 la vacunaci\xF3n.
+    Las vacunas ayudan a nuestro cuerpo a estar preparado para defenderse si entra
+    en contacto con el virus. Cuando muchas personas se vacunan, el virus tiene menos
+    oportunidades de seguir contagiando."
+  - "Alex: \xA1Ah! Entonces, si nos vacunamos, ayudamos a que todos estemos m\xE1s
+    protegidos."
+  - "Maestra: \xA1As\xED es! Pero hasta que tengamos la vacuna, lo mejor que podemos
+    hacer es seguir las medidas de seguridad: usar cubrebocas, lavarnos las manos,
+    mantener distancia de otras personas y desinfectar todo lo que tocamos."
+  - "Maestra: Bueno chicos Ahora ya que saben esto vamos a jugar un peque\xF1o juego
+    para ver si aprendieron correctamente todo, el juego sera el ahorcado, estan
+    listos, vamos!!"
 --- !u!1 &2058277438
 GameObject:
   m_ObjectHideFlags: 0
