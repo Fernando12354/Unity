@@ -3,45 +3,54 @@ using System.Collections;
 
 public class SequentialCanvasController : MonoBehaviour
 {
-    public DisplayMessage displayMessage;      // Referencia al componente DisplayMessage
-    public DialogManagerSinVida dialogManager; // Referencia al componente DialogManagerSinVida
-    public int dialogIndex = 0;                // Índice del diálogo a iniciar
-    public GameObject canvasNombreMision4;     // Referencia al Canvas NombreMision4
-    public GameObject canvasDialogosNoticieros;// Referencia al Canvas CanvasDialogosNoticieros
-    public GameObject canvasCall;              // Referencia al Canvas CanvasCall
-    public Llamadas llamadas;                  // Referencia al script de llamadas
+    public DisplayMessage displayMessage; // Asigna el script que gestiona la visualización del mensaje
+    public DialogManagerSinVida2 dialogManager; // Asigna el manager de diálogos
+    public int dialogIndex = 0; // Índice del diálogo actual
+
+    [Header("Canvas")]
+    public GameObject canvasNombreMision4; // Canvas de la misión
+    public GameObject canvasDialogosNoticieros; // Canvas de diálogos
+    public GameObject canvasCall; // Canvas de llamadas
+
+    public Llamadas2 llamadas2; // Asigna el script que gestiona las llamadas
 
     private bool isMessageComplete = false;
 
+    void Start()
+    {
+        canvasNombreMision4.SetActive(true);
+        canvasDialogosNoticieros.SetActive(false);
+        canvasCall.SetActive(true);
+    }
+
     void Update()
     {
-        // Si el mensaje ya se ha mostrado y el diálogo aún no ha comenzado
         if (!displayMessage.messageText.gameObject.activeSelf && !isMessageComplete)
         {
-            isMessageComplete = true; // Marca el mensaje como completo
-            StartNextDialog();        // Inicia el diálogo
+            Debug.Log("El mensaje ha sido completado, iniciando el siguiente diálogo..."); // Mensaje de depuración
+            isMessageComplete = true;
+            StartNextDialog();
         }
     }
 
-    void StartNextDialog()
+    private void StartNextDialog()
     {
-        // Desactiva el canvas NombreMision4 y activa CanvasDialogosNoticieros
-        canvasNombreMision4.SetActive(false);      // Desactiva NombreMision4
-        canvasDialogosNoticieros.SetActive(true);  // Activa CanvasDialogosNoticieros
+        canvasNombreMision4.SetActive(false);
+        canvasDialogosNoticieros.SetActive(true);
 
-        dialogManager.StartDialog(dialogIndex);    // Inicia el diálogo con el índice especificado
+        Debug.Log("Iniciando el siguiente diálogo..."); // Mensaje de depuración
+        dialogManager.StartDialog(dialogIndex);
+        StartCoroutine(WaitForDialogToEnd());
     }
 
-    public void EndCurrentDialog()
+    private IEnumerator WaitForDialogToEnd()
     {
-        // Llamado cuando termina el último diálogo
-        Debug.Log("Diálogo finalizado, activando siguiente script...");
+        yield return new WaitUntil(() => !canvasDialogosNoticieros.activeSelf);
 
-        // Desactiva el CanvasDialogosNoticieros y activa el CanvasCall
-        canvasDialogosNoticieros.SetActive(false);  // Desactiva CanvasDialogosNoticieros
-        canvasCall.SetActive(true);                 // Activa CanvasCall
-
-        // Inicia el siguiente script de llamadas
-        StartCoroutine(llamadas.StartCall());
+        if (dialogManager.IsLastDialogComplete())
+        {
+            Debug.Log("Diálogo completo, activando llamada..."); // Mensaje de depuración
+            llamadas2.ActivarLlamada();
+        }
     }
 }
