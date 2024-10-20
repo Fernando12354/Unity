@@ -216,7 +216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &135217301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,7 +543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &480697608
 RectTransform:
   m_ObjectHideFlags: 0
@@ -615,6 +615,87 @@ MonoBehaviour:
 
 '
   configuracion: {fileID: 11400000, guid: 524ff2cfe798ce346a2bf06151b4baed, type: 2}
+--- !u!1 &721791982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 721791984}
+  - component: {fileID: 721791983}
+  m_Layer: 0
+  m_Name: CallManager2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &721791983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721791982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f5e9ae19177a046b10f3046a007fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  callAnswer: 0
+  callSound: 0
+  Notificacion: {fileID: 405564588}
+  AnimateNotification: {fileID: 405564589}
+  txtNotificacion: {fileID: 1002919891}
+  textoNotificacion: Presiona X para contestar
+  Phone: {fileID: 1349114160}
+  vozCaller: {fileID: 8300000, guid: 8cd33c8b09ce0bd4093c662507659450, type: 3}
+  vozAnswer: {fileID: 8300000, guid: b0d038d69d43a7a46a6a2f51ace8e35b, type: 3}
+  interfaceLlamadas: {fileID: 1537820206}
+  AnimateCall: {fileID: 1537820209}
+  contenedorTexto: {fileID: 1394820026}
+  llamadas:
+  - caller: "Mam\xE1"
+    answer: Alex
+    dialogos:
+    - talker: Alex
+      text: "Hola mam\xE1, ya escuchaste la noticia de la vacuna??"
+    - talker: "Mam\xE1"
+      text: "S\xED, Alex, qu\xE9 emoci\xF3n, justamente por eso te hablo. \xA1Por
+        fin podremos volver a nuestra vida cotidiana!!!\_"
+    - talker: Alex
+      text: "Tenemos que contarle esta noticia a mi t\xEDo, \xA1no puede perd\xE9rsela!"
+    - talker: "Mam\xE1"
+      text: "Oh, cierto, tu t\xEDo...... Alex tu t\xEDo me coment\xF3 que empez\xF3
+        a sentirse muy mal hace unos d\xEDas. Alex, necesita que le lleves la comida
+        que dej\xE9 en la mesa cuanto antes."
+    - talker: Alex
+      text: "Est\xE1 bien, est\xE1 bien..."
+    - talker: "Mam\xE1"
+      text: Alex cuidate mucho me da miedo que te contagies por ir con tu tio, pero
+        no queda otra opcion
+    - talker: Alex
+      text: "No te preocupes, mam\xE1. Voy a seguir todas las medidas sanitarias
+        que aprend\xED en la escuela para mantenerme seguro."
+    - talker: "Mam\xE1"
+      text: Cuidate Mucho Te amo.
+  configuracion: {fileID: 11400000, guid: 524ff2cfe798ce346a2bf06151b4baed, type: 2}
+--- !u!4 &721791984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721791982}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &746096373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,8 +1150,8 @@ Camera:
   m_GameObject: {fileID: 1156720291}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1384,8 +1465,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1684,7 +1765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1679393879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2019,12 +2100,89 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayMessage: {fileID: 1068736693}
-  dialogManager: {fileID: 135217301}
+  dialogManager: {fileID: 1833024814}
   dialogIndex: 0
   canvasNombreMision4: {fileID: 1068736688}
   canvasDialogosNoticieros: {fileID: 223375636}
   canvasCall: {fileID: 1679393878}
-  llamadas: {fileID: 480697609}
+  llamadas2: {fileID: 721791983}
+--- !u!1 &1833024813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1833024815}
+  - component: {fileID: 1833024814}
+  m_Layer: 0
+  m_Name: DialogManager2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1833024814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833024813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c8d5963086a3c949a0eddc91c2eca83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogText: {fileID: 1448409038}
+  characterImage: {fileID: 1257839165}
+  dialogBox: {fileID: 8488095}
+  characterImages:
+  - {fileID: 21300000, guid: b338bd8a8da67ea4d9ae7922f5477d44, type: 3}
+  - {fileID: 21300000, guid: 21da4445e8a4b4242a9737dcf1d512d0, type: 3}
+  - {fileID: 21300000, guid: 21da4445e8a4b4242a9737dcf1d512d0, type: 3}
+  - {fileID: 21300000, guid: d90cb462dd8664c468ade42b58c70dea, type: 3}
+  - {fileID: 21300000, guid: 7d884bae216930544a330245d4547acf, type: 3}
+  - {fileID: 21300000, guid: 6ff2567b2144fed42a353ea21fa6d9c7, type: 3}
+  - {fileID: 21300000, guid: 7d884bae216930544a330245d4547acf, type: 3}
+  - {fileID: 21300000, guid: 6ff2567b2144fed42a353ea21fa6d9c7, type: 3}
+  - {fileID: 21300000, guid: 21da4445e8a4b4242a9737dcf1d512d0, type: 3}
+  dialogTexts:
+  - Noticias de Ultimo Momento
+  - Hola y Binevenidos a todos nuestros televidentes el dia de hoy tenemos una noticia
+    impactante.
+  - Nos estamos enlazando con Nuestra reportera Patricia y la Doctora Susana quien
+    nos daran esta noticia.
+  - "Doctora Susana, gracias por acompa\xF1arnos nuevamente en el programa, Podria
+    decirnos cual es la gran noticia ?"
+  - Muchas Gracias por la invitacion Patricia, me gustaria anunciar que el dia de
+    hoy se ah creado la vacuna contra el el COVID-19.
+  - Wow eso es Increible Doctora Susana eso significa que podremos retomar nuestra
+    vida normal?
+  - "Poco a poco las cosas ir\xE1n volviendo a la normalidad. Sin embargo, comenzaremos
+    priorizando la vacunaci\xF3n de adultos mayores, ni\xF1os y personas con algun
+    tipo de enermedad."
+  - "Muchas gracias por esta increible noticia Doctora, volvemos al estudio con mis
+    compa\xF1eros"
+  - "Gracias por esta excelente noticia. As\xED que ya saben, amigos: \xA1corran
+    la voz y est\xE9n atentos a cu\xE1ndo se realizar\xE1 la vacunaci\xF3n en sus
+    ciudades!"
+  dialogAudioClip: {fileID: 8300000, guid: c58eb037f1cd9f343b8db9646cd77a30, type: 3}
+--- !u!4 &1833024815
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833024813}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1918474199
 GameObject:
   m_ObjectHideFlags: 0

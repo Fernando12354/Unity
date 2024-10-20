@@ -87,7 +87,7 @@ public class Llamadas : MonoBehaviour
             }
             else
             {
-                Debug.Log("STEVEN");
+                Debug.Log("Alex");
                 Phone.clip = vozAnswer;
             }  
             Phone.Play(0);       
