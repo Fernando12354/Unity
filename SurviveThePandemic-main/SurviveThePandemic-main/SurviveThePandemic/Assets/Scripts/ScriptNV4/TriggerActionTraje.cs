@@ -6,53 +6,101 @@ using TMPro; // Para usar TextMeshProUGUI
 public class TriggerActionTraje : MonoBehaviour
 {
     [Header("Configuración de UI")]
-    public GameObject messageUI; // Panel de mensaje que se muestra
-    public TextMeshProUGUI messageText; // Texto del mensaje (ejemplo: "Presiona X")
-    public string promptMessage = "Presiona X"; // Mensaje a mostrar
+    public GameObject messageUI;  // Panel del mensaje
+    public TextMeshProUGUI messageText;  // Texto del mensaje
+    public string promptMessage = "Presiona X";  // Mensaje a mostrar
 
-    private bool playerInZone = false; // Indica si el jugador está dentro de la zona
+    [Header("Configuración del Cambio de Personaje")]
+    public GameObject currentPlayer;  // Objeto del jugador actual
+    public GameObject newPlayer;  // Objeto del nuevo personaje
+    public GameObject objectToDisable;  // Objeto a desactivar
+
+    [Header("Sonido")]
+    public AudioClip changeSound;  // Sonido que se reproducirá
+
+    private AudioSource audioSource;  // Fuente de audio
+    private bool playerInZone = false;  // Estado del jugador en la zona
+    private bool actionExecuted = false;  // Verificar si ya se ejecutó la acción
+
+    public MessageManager messageManager; 
+    public ObjectiveController objectiveController;
+
+    public string objectiveName; // Nombre del objetivo que se debe completar
 
     private void Start()
     {
-        // Asegúrate de que el mensaje esté oculto al iniciar
-        messageUI.SetActive(false);
+        audioSource = gameObject.AddComponent<AudioSource>(); // Agregar AudioSource al objeto
+        messageUI.SetActive(false);  // Asegurar que el mensaje esté oculto al inicio
+        newPlayer.SetActive(false);  // Asegurar que el nuevo personaje esté oculto inicialmente
     }
 
-    // Detectar cuándo el jugador entra en la zona (asegúrate de que el objeto tenga un Collider con IsTrigger activado)
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) // Asegúrate de que el jugador tenga la etiqueta "Player"
+        if (other.CompareTag("Player") && !actionExecuted)
         {
             playerInZone = true;
-            messageText.text = promptMessage; // Establecer el mensaje
-            messageUI.SetActive(true); // Mostrar el mensaje
+            messageText.text = promptMessage;
+            messageUI.SetActive(true);  // Mostrar mensaje
         }
     }
 
-    // Detectar cuándo el jugador sale de la zona
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             playerInZone = false;
-            messageUI.SetActive(false); // Ocultar el mensaje
+            messageUI.SetActive(false);  // Ocultar mensaje
         }
     }
 
     private void Update()
     {
-        // Detectar si el jugador está en la zona y presiona la tecla X
-        if (playerInZone && Input.GetKeyDown(KeyCode.X))
+        if (playerInZone && Input.GetKeyDown(KeyCode.X) && !actionExecuted)
         {
-            ExecuteAction(); // Llamar a la acción
+            ExecuteAction();  // Ejecutar acción al presionar X
         }
     }
 
-    // Acción que se ejecuta al presionar X
     private void ExecuteAction()
+{
+    actionExecuted = true;  // Marcar la acción como ejecutada
+    messageUI.SetActive(false);  // Ocultar mensaje definitivamente
+
+    // Desactivar el objeto
+    if (objectToDisable != null)
     {
-        Debug.Log("Acción ejecutada al presionar X");
-        // Aquí puedes agregar cualquier acción que desees
-        // Por ejemplo: Abrir una puerta, recoger un objeto, etc.
+        objectToDisable.SetActive(false);
     }
+
+    // Reproducir el sonido
+    if (changeSound != null)
+    {
+        audioSource.PlayOneShot(changeSound);
+    }
+
+    // Cambiar de personaje en la misma posición y rotación
+    Vector3 playerPosition = currentPlayer.transform.position;
+    Quaternion playerRotation = currentPlayer.transform.rotation;
+
+    currentPlayer.SetActive(false);  // Desactivar personaje actual
+    newPlayer.transform.position = playerPosition;  // Mover el nuevo personaje
+    newPlayer.transform.rotation = playerRotation;
+    newPlayer.SetActive(true);  // Activar el nuevo personaje
+
+    Debug.Log("Acción ejecutada: Cambio de personaje, sonido reproducido y objeto desactivado.");
+
+    // Llamar a MessageManager para mostrar mensajes
+    if (messageManager != null)
+    {
+        messageManager.gameObject.SetActive(true); // Activar el MessageManager
+        messageManager.StartCoroutine("ShowMessages"); // Comenzar a mostrar mensajes
+    }
+
+    if (objectiveController != null && !string.IsNullOrEmpty(objectiveName))
+        {
+            objectiveController.CompleteObjective(objectiveName);
+        }
 }
+
+}
+
