@@ -104,4 +104,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel 4/SalaDeHospitaNV4.unity
     guid: 4ec4b139af8fd3e48a620c77996d09f3
+  - enabled: 1
+    path: Assets/Scenes/Nivel 4/BarrioDelTioNV4despues cuarto.unity
+    guid: dc14b725eb5947a4ca64c0a574388046
+  - enabled: 1
+    path: Assets/Scenes/Nivel 4/SepararLasCosas.unity
+    guid: b6778981434c6954cbc998b9b4fa83c2
   m_configObjects: {}
