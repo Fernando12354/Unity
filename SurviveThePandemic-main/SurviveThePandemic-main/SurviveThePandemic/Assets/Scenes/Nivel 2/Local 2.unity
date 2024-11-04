@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1221827831}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -156,6 +156,7 @@ MonoBehaviour:
   c2: {fileID: 0}
   cuboSalida: {fileID: 0}
   CanvasDialogosSecundarios: {fileID: 0}
+  Pers1: {fileID: 0}
 --- !u!4 &4408526
 Transform:
   m_ObjectHideFlags: 0
@@ -4824,12 +4825,20 @@ PrefabInstance:
       value: nurse
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 61ab3649cd6644e46a4d6878b4f25a06, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5664
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 61ab3649cd6644e46a4d6878b4f25a06, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3562
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 61ab3649cd6644e46a4d6878b4f25a06, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.285
+      value: -0.456
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 61ab3649cd6644e46a4d6878b4f25a06, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: -0.0014
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61ab3649cd6644e46a4d6878b4f25a06, type: 3}

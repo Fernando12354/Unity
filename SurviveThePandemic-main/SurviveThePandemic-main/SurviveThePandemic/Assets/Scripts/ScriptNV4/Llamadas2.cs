@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement; // Importar para manejo de escenas
 
 public class Llamadas2 : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class Llamadas2 : MonoBehaviour
 
     [Header("Configuración de Teclado")]
     public ConfigDialogos configuracion;
+
+    [Header("Configuración de Escena")]
+    public string escenaSiguiente; // Nombre de la escena a cargar
 
     void Start()
     {
@@ -113,6 +117,14 @@ public class Llamadas2 : MonoBehaviour
         AnimateCall.LeanMoveLocalY(-Screen.height, 0.5f).setEaseInExpo();
         yield return new WaitForSeconds(1);
         interfaceLlamadas.SetActive(false);
+
+        CambiarEscena(); // Llamar al cambio de escena
+    }
+
+    private void CambiarEscena()
+    {
+        Debug.Log("Cambiando a la escena: " + escenaSiguiente);
+        SceneManager.LoadScene(escenaSiguiente); // Cargar la nueva escena
     }
 }
 
