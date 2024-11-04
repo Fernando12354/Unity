@@ -2467,6 +2467,7 @@ MonoBehaviour:
   objectiveController: {fileID: 1021394204}
   objectiveName: Enciende la TV
   sceneToLoad: Mapa Ciudad NV2
+  objetivoManager: {fileID: 0}
 --- !u!65 &709681688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4673,7 +4674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messageText: {fileID: 1238119304}
   displayDuration: 5
-  messageToShow: "La B\xFAsqueda de Suministros "
+  messageToShow: "Misi\xF3n 2 La B\xFAsqueda de Suministros "
 --- !u!1 &1230336249
 GameObject:
   m_ObjectHideFlags: 0
