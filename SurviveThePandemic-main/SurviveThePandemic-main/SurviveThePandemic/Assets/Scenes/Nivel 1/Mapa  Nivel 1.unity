@@ -11414,6 +11414,30 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6423613193236397261, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
+      propertyPath: m_Size.x
+      value: 0.061542597
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423613193236397261, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
+      propertyPath: m_Size.y
+      value: 0.046000037
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423613193236397261, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
+      propertyPath: m_Size.z
+      value: 0.20106173
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423613193236397261, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
+      propertyPath: m_Center.x
+      value: 0.0015801431
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423613193236397261, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
+      propertyPath: m_Center.y
+      value: 0.006525801
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423613193236397261, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
+      propertyPath: m_Center.z
+      value: -0.0050590136
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423613193236397261, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -11435,7 +11459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6822948312560163701, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.86
+      value: 48.33
       objectReference: {fileID: 0}
     - target: {fileID: 6822948312560163701, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11443,7 +11467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6822948312560163701, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 46.93
+      value: 44.74
       objectReference: {fileID: 0}
     - target: {fileID: 6822948312560163701, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
       propertyPath: m_LocalRotation.w
@@ -70553,6 +70577,19 @@ MonoBehaviour:
   coinText: {fileID: 1880882482}
   sceneToLoad: Scena Escuela
   specialObject: {fileID: 1254459852}
+--- !u!65 &1055484718
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055484716}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04400001, y: 0.046, z: 0.186}
+  m_Center: {x: 0.0012331711, y: 0.0065257996, z: -0.0074461}
 --- !u!1001 &1057947370
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,11 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class QuizManager : MonoBehaviour
 {
     public Image questionImage; // Componente de imagen para mostrar la imagen de la pregunta
-    public Text questionText; // Componente de texto para mostrar el texto de la pregunta
+    public TextMeshProUGUI questionText; // Componente de texto para mostrar el texto de la pregunta
     public Button[] optionButtons; // Array de botones para las opciones de respuesta
     public Text scoreText; // Componente de texto para mostrar la puntuación
     public GameObject retryButton; // Botón para reintentar el cuestionario
