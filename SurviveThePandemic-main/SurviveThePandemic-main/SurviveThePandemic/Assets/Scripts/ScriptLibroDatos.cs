@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class ScriptLibroDatos : MonoBehaviour
 {
     public GameObject infoPanel; // Panel que cubre la pantalla
-    public Text infoText; // Componente de texto para mostrar la información del virus
+    public TextMeshProUGUI infoText; // Componente de texto para mostrar la información del virus
     public string[] virusFacts; // Array de datos curiosos sobre los virus
     public Button continueButton; // Botón para continuar el juego
 
