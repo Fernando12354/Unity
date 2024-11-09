@@ -9,6 +9,9 @@ public class DialogTriggerZoneSinVidaNV5 : MonoBehaviour
     public string objectiveName; // Nombre del objetivo que se debe completar
     public int firstDialogIndex = 0; // Índice del primer diálogo que se mostrará
     public AudioSource musicAudioSource; // Referencia al AudioSource de la música
+    public GameObject escenario; // Objeto que contiene el escenario y personajes
+    public GameObject minijuegoCanvas; // Objeto del canvas que contiene el minijuego
+    public MinijuegoJeringa minijuegoScript; // Referencia al script del minijuego
 
     private bool hasTriggered = false;
     public GameObject ZonaDeDialogosPost;
@@ -36,7 +39,6 @@ public class DialogTriggerZoneSinVidaNV5 : MonoBehaviour
             }
             else
             {
-
                 if (objectiveController != null && !string.IsNullOrEmpty(objectiveName))
                 {
                     objectiveController.CompleteObjective(objectiveName);
@@ -58,7 +60,23 @@ public class DialogTriggerZoneSinVidaNV5 : MonoBehaviour
         // Reanudar la música
         ResumeMusic();
 
-          if (ZonaDeDialogosPost != null)
+        // Activar/desactivar los objetos correspondientes
+        if (escenario != null)
+        {
+            escenario.SetActive(false); // Desactiva el objeto del escenario
+        }
+
+        if (minijuegoCanvas != null)
+        {
+            minijuegoCanvas.SetActive(true); // Activa el canvas del minijuego
+        }
+
+        if (minijuegoScript != null)
+        {
+            minijuegoScript.StartMinijuego(); // Inicia el minijuego y comienza el tiempo
+        }
+
+        if (ZonaDeDialogosPost != null)
         {
             ZonaDeDialogosPost.SetActive(true); // Activa el GameObject con MessageManager
         }
