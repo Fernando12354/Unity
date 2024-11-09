@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class InfoTrigger : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class InfoTrigger : MonoBehaviour
     public int objectIndex; // Índice que asignarás manualmente a cada objeto en el Inspector.
     private bool isInTrigger; // Verifica si el jugador está en el área de activación.
     private bool isCanvasActive; // Para verificar si el canvas está activo.
+
+    public Image infoImage; // El componente de imagen en el canvas.
+    public Sprite assignedSprite; // Imagen específica asignada a este objeto.
 
     private void Start()
     {
@@ -24,10 +28,9 @@ public class InfoTrigger : MonoBehaviour
         infoArray[6] = "El rinovirus NO causa dolor en el estómago.";
         infoArray[7] = "RSV significa Virus Sincitial Respiratorio.";
         infoArray[8] = "La influenza H1N1 puede causar fiebre, tos, dolor de garganta, dolores musculares, entre otros.";
-        infoArray[9] = "El hantavirus es un tipo de virus que puede encontrarse en roedores.";
+        //infoArray[9] = "El hantavirus es un tipo de virus que puede encontrarse en roedores.";
+        infoArray[9] = "El enterovirus se propaga principalmente a través del contacto con fluidos corporales.";
 
-        // Desactiva el canvas al inicio.
-        infoCanvas.SetActive(false);
     }
 
     private void Update()
@@ -44,8 +47,9 @@ public class InfoTrigger : MonoBehaviour
         if (other.CompareTag("Player")) // Asegúrate de que el jugador es quien activa el trigger.
         {
             isInTrigger = true;
-            // Muestra la información basada en el índice del objeto.
+            // Muestra la información y la imagen específica basada en el índice del objeto.
             infoText.text = infoArray[objectIndex];
+            infoImage.sprite = assignedSprite; // Asigna la imagen específica a este objeto.
             infoCanvas.SetActive(true); // Muestra el canvas.
             isCanvasActive = true; // El canvas está activo.
         }

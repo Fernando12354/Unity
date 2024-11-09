@@ -1,15 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class QuizManager : MonoBehaviour
 {
     public Image questionImage; // Componente de imagen para mostrar la imagen de la pregunta
-    public Text questionText; // Componente de texto para mostrar el texto de la pregunta
+    public TextMeshProUGUI questionText; // Componente de texto para mostrar el texto de la pregunta
     public Button[] optionButtons; // Array de botones para las opciones de respuesta
     public Text scoreText; // Componente de texto para mostrar la puntuación
     public GameObject retryButton; // Botón para reintentar el cuestionario
     public GameObject continueButton; // Botón para continuar después del cuestionario
+
+     public GameObject goToSceneButton; // Botón para cambiar a otra escena si el puntaje es menor a 6
+    public string sceneName; // Nombre de la escena a la que se debe cambiar si el puntaje es menor a 6
 
     private int currentQuestionIndex = 0; // Índice de la pregunta actual
     private int score = 0; // Puntuación del jugador
@@ -30,6 +35,7 @@ public class QuizManager : MonoBehaviour
         retryButton.SetActive(false); // Ocultar el botón de reintento inicialmente
         continueButton.SetActive(false); // Ocultar el botón de continuar inicialmente
         DisplayQuestion(questions[currentQuestionIndex]);
+        goToSceneButton.SetActive(false);
     }
 
     void DisplayQuestion(Question question)
@@ -78,6 +84,9 @@ public class QuizManager : MonoBehaviour
         {
             retryButton.SetActive(true); // Mostrar el botón de reintento
             continueButton.SetActive(false); // Ocultar el botón de continuar
+            goToSceneButton.SetActive(true);
+
+            
         }
         else
         {
@@ -86,12 +95,18 @@ public class QuizManager : MonoBehaviour
         }
     }
 
+       public void ChangeScene()
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void RetryQuiz()
     {
         score = 0; // Reiniciar la puntuación
         currentQuestionIndex = 0; // Reiniciar el índice de preguntas
         retryButton.SetActive(false); // Ocultar el botón de reintento
         continueButton.SetActive(false); // Ocultar el botón de continuar
+        goToSceneButton.SetActive(false); 
         questionImage.gameObject.SetActive(true); // Mostrar la imagen de la pregunta
         foreach (Button button in optionButtons)
         {

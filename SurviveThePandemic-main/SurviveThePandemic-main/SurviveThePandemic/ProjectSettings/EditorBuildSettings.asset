@@ -37,13 +37,22 @@ EditorBuildSettings:
     guid: 3628e6e3685e6f741a242357c59e4947
   - enabled: 0
     path: 
-    guid: 39efc3b713a544241a2f980e9ee0ab2d
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Nivel 1/Inentificacion Imagenes/Identifica virus.unity
     guid: 6f3b55cc79c951a48bb4b7bc8a5d38cd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nivel 1/Sopa de letras/Sopa de letras.unity
     guid: ec59fefc7339f1e4f960df4f717b57ab
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1/Pasillo Escuela Biblioteca.unity
+    guid: 7c15251a14f8d6a4faec95cafe13a81c
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1/Pasillo Escuela Salida.unity
+    guid: 3af4824ad6380024d9d05700ea676286
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1/Scena Escuela Final.unity
+    guid: b04ab3d93557d6545ab0f51a1ea14638
   - enabled: 1
     path: Assets/Scenes/Hospital.unity
     guid: 28af21c30e7c4044d8822ea3ab2ef590

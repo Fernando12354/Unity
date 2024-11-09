@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1254071684}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11414,6 +11414,30 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6423613193236397261, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
+      propertyPath: m_Size.x
+      value: 0.061542597
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423613193236397261, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
+      propertyPath: m_Size.y
+      value: 0.046000037
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423613193236397261, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
+      propertyPath: m_Size.z
+      value: 0.20106173
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423613193236397261, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
+      propertyPath: m_Center.x
+      value: 0.0015801431
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423613193236397261, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
+      propertyPath: m_Center.y
+      value: 0.006525801
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423613193236397261, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
+      propertyPath: m_Center.z
+      value: -0.0050590136
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423613193236397261, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -11435,7 +11459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6822948312560163701, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.86
+      value: 48.33
       objectReference: {fileID: 0}
     - target: {fileID: 6822948312560163701, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11443,7 +11467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6822948312560163701, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 46.93
+      value: 44.74
       objectReference: {fileID: 0}
     - target: {fileID: 6822948312560163701, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
       propertyPath: m_LocalRotation.w
@@ -63659,7 +63683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -180, y: -60}
+  m_AnchoredPosition: {x: 335, y: -60}
   m_SizeDelta: {x: 400, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &999511338
@@ -70553,6 +70577,19 @@ MonoBehaviour:
   coinText: {fileID: 1880882482}
   sceneToLoad: Scena Escuela
   specialObject: {fileID: 1254459852}
+--- !u!65 &1055484718
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055484716}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04400001, y: 0.046, z: 0.186}
+  m_Center: {x: 0.0012331711, y: 0.0065257996, z: -0.0074461}
 --- !u!1001 &1057947370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127572,6 +127609,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4933713832616094532, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_text
+      value: Buena Suerte!!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832616094532, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -127584,16 +127625,24 @@ PrefabInstance:
       value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: spriteFinal
+      value: 
+      objectReference: {fileID: 21300000, guid: c79d12a8d2cb67f4c979f6fc4a52ea8d, type: 3}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: mensajeFinal
+      value: "\xA1Buena Suerte!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
       propertyPath: componenteCompleto
       value: 
       objectReference: {fileID: 2090977659}
     - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
       propertyPath: parrafos.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
       propertyPath: ayudaVisual.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
       propertyPath: parrafos.Array.data[0]
@@ -127616,8 +127665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
       propertyPath: parrafos.Array.data[6]
-      value: "Necesitas dinero para poder subir al autobus, encuentra las 10 monedas
-        que est\xE1n en tu vecindario."
+      value: Bienvenido a Wpandemic-19
       objectReference: {fileID: 0}
     - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
       propertyPath: parrafos.Array.data[7]
@@ -127634,7 +127682,7 @@ PrefabInstance:
     - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
       propertyPath: ayudaVisual.Array.data[6]
       value: 
-      objectReference: {fileID: 21300000, guid: a4b89fad85b334b4c9ed91760f96096d, type: 3}
+      objectReference: {fileID: 21300000, guid: c79d12a8d2cb67f4c979f6fc4a52ea8d, type: 3}
     - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
       propertyPath: ayudaVisual.Array.data[7]
       value: 
