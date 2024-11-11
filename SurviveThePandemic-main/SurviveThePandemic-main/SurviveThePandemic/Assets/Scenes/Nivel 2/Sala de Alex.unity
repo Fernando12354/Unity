@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1962979432}
-  m_IndirectSpecularColor: {r: 0.44931334, g: 0.49938548, b: 0.5757061, a: 1}
+  m_IndirectSpecularColor: {r: 0.44931298, g: 0.49938458, b: 0.57570475, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -825,6 +825,10 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: ebdc856ac09d29d4bb0fe4788ccfbd25, type: 3}
     displayDuration: 7
     delayBeforeShowing: 2
+  - message: Dirigete a la puerta.
+    image: {fileID: 21300000, guid: 97cbeb1343ce688478002ad59f3ce02b, type: 3}
+    displayDuration: 4
+    delayBeforeShowing: 1
 --- !u!4 &111150885
 Transform:
   m_ObjectHideFlags: 0
@@ -3567,6 +3571,158 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974913391}
   m_CullTransparentMesh: 1
+--- !u!1 &987930977 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+  m_PrefabInstance: {fileID: 1562149566}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &987930979
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987930977}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0999999, y: 2.6, z: 1.0999999}
+  m_Center: {x: -1.55, y: 3.3, z: -2.25}
+--- !u!1 &989244266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 989244267}
+  - component: {fileID: 989244269}
+  - component: {fileID: 989244268}
+  m_Layer: 5
+  m_Name: Presiona Enter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &989244267
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989244266}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.78415, y: 3.1399, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1076318793}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -315, y: 398}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &989244268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989244266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Presiona Enter para continuar...
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 1a1d0f93b10b3b3499a14f579a00ce84, type: 2}
+  m_sharedMaterial: {fileID: -8619156991914698464, guid: 1a1d0f93b10b3b3499a14f579a00ce84, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 16
+  m_fontSizeBase: 16
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -57.345848, y: 0, z: -69.05129, w: -117.15346}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &989244269
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989244266}
+  m_CullTransparentMesh: 1
 --- !u!1 &1003570229
 GameObject:
   m_ObjectHideFlags: 0
@@ -3814,6 +3970,10 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: ebdc856ac09d29d4bb0fe4788ccfbd25, type: 3}
     displayDuration: 5
     delayBeforeShowing: 6
+  - message: Enciende la TV.
+    image: {fileID: 21300000, guid: 97cbeb1343ce688478002ad59f3ce02b, type: 3}
+    displayDuration: 4
+    delayBeforeShowing: 1
 --- !u!114 &1020450858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4269,6 +4429,7 @@ RectTransform:
   m_Children:
   - {fileID: 1286563957}
   - {fileID: 1683027206}
+  - {fileID: 989244267}
   m_Father: {fileID: 1230336253}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5087,7 +5248,7 @@ RectTransform:
   m_GameObject: {fileID: 1286563956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 18.372234, y: 9.239626, z: 1}
+  m_LocalScale: {x: 19.061193, y: 9.239626, z: 1}
   m_Children: []
   m_Father: {fileID: 1076318793}
   m_RootOrder: 0
@@ -5272,16 +5433,16 @@ MonoBehaviour:
     infectados pueden no mostrar s\xEDntomas graves, otros desarrollan fiebre, tos
     y dificultad para respirar. Es algo que a\xFAn estamos estudiando a fondo."
   - "\xBFY c\xF3mo se transmite este nuevo virus? \xBFEs altamente contagioso?"
-  - "As\xED es. Se transmite principalmente a trav\xE9s de peque\xF1as gotas que
-    salen de la nariz o la boca cuando una persona infectada habla, tose o estornuda.
-    Estas gotas pueden caer en superficies, y si alguien las toca y luego se lleva
-    las manos a la cara, pueden contagiarse. Por eso es tan importante ser precavidos."
+  - "Si. Se transmite principalmente a trav\xE9s de peque\xF1as gotas que salen de
+    la nariz o la boca cuando una persona infectada habla, tose o estornuda. Estas
+    gotas pueden caer en superficies, y si alguien las toca y luego se lleva las
+    manos a la cara, pueden contagiarse."
   - "En este momento, \xBFqu\xE9 medidas podemos tomar para protegernos del contagio?"
   - "Las medidas m\xE1s efectivas que estamos recomendando son el uso de mascarillas,
     el lavado frecuente de manos con agua y jab\xF3n durante al menos 20 segundos,
     y mantener una distancia de al menos 1.5 metros entre personas. Tambi\xE9n es
     fundamental evitar tocarse la cara, sobre todo los ojos, nariz y boca, y desinfectar
-    las superficies que tocamos con frecuencia."
+    las superficies que tocamos."
   - "Doctora Susana, gracias por acompa\xF1arnos esta noche, volvemos al estudio."
   - Muchas gracias, Patricia. No olviden seguir estas recomendaciones y asegurarse
     de contar con los suministros necesarios para enfrentar esta crisis sanitaria.
@@ -5964,6 +6125,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474521205}
   m_CullTransparentMesh: 1
+--- !u!1001 &1562149566
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7242
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.1709
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.97
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.3079
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da99d6bdbfea22143b2241f6bbc09d55, type: 2}
+    - target: {fileID: 919132149155446097, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
+      propertyPath: m_Name
+      value: lampara (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ff1cba1584b4d5247b132ecb6ded7bd3, type: 3}
 --- !u!1 &1568275226
 GameObject:
   m_ObjectHideFlags: 0
@@ -6378,7 +6608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.442, y: -257}
+  m_AnchoredPosition: {x: 2.442, y: -423}
   m_SizeDelta: {x: 1601.8455, y: 183.958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1683027207
@@ -6442,7 +6672,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

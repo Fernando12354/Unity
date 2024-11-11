@@ -9446,11 +9446,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616017528}
   m_CullTransparentMesh: 1
---- !u!95 &1630662538 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4595579530510801756, guid: 4e95a7bd459d85342b1dae8ed7b2947f, type: 3}
-  m_PrefabInstance: {fileID: 34284035}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1630876129 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 8f74059aa6b011748b687243a6917992, type: 3}
@@ -12695,11 +12690,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2137461778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 703f06da55610eb46b34fd38dbb8b05d, type: 3}
+  m_Script: {fileID: 11500000, guid: a63b989418f03404ea39f921592753c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAnimator: {fileID: 1630662538}
-  numeroEscena: 14
+  objectiveController: {fileID: 79017631}
+  objectiveName: prueba
+  sceneToLoad: Pasillo
+  objetivoManager: {fileID: 4408525}
 --- !u!65 &2137461781
 BoxCollider:
   m_ObjectHideFlags: 0
