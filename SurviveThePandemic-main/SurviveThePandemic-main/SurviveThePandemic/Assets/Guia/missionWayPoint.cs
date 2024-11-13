@@ -10,6 +10,7 @@ public class missionWayPoint : MonoBehaviour
     // The target (location, enemy, etc..)
     public Transform target;
     public GameObject player;
+    public GameObject playerWithMask; // Player opcional con cubrebocas
     // UI Text to display the distance
     public Text meter;
     // To adjust the position of the icon
@@ -21,10 +22,18 @@ public class missionWayPoint : MonoBehaviour
 
     private void Update()
     {
-        // Calcula la distancia entre el jugador y el objetivo
-        float distanceToTarget = Vector3.Distance(target.position, player.transform.position);
+        GameObject activePlayer = player; // Usar el player original como predeterminado
 
-        // Si la distancia es menor o igual a 'hideDistance' (2 metros por defecto), ocultar los indicadores
+        // Si el player con cubrebocas está activo en la escena, usarlo en su lugar
+        if (playerWithMask != null && playerWithMask.activeInHierarchy)
+        {
+            activePlayer = playerWithMask;
+        }
+
+        // Calcula la distancia entre el jugador activo y el objetivo
+        float distanceToTarget = Vector3.Distance(target.position, activePlayer.transform.position);
+
+        // Si la distancia es menor o igual a 'hideDistance', ocultar los indicadores
         if (distanceToTarget <= hideDistance)
         {
             // Desactivar el ícono y el texto de la distancia
@@ -49,8 +58,8 @@ public class missionWayPoint : MonoBehaviour
         // Convertir la posición del objetivo de 3D a 2D en la pantalla
         Vector2 pos = Camera.main.WorldToScreenPoint(target.position + offset);
 
-        // Verifica si el objetivo está detrás del jugador
-        if (Vector3.Dot((target.position - player.transform.position).normalized, player.transform.forward) < 0)
+        // Verifica si el objetivo está detrás del jugador activo
+        if (Vector3.Dot((target.position - activePlayer.transform.position).normalized, activePlayer.transform.forward) < 0)
         {
             if (pos.x < Screen.width / 2)
             {

@@ -18,6 +18,7 @@ public class InicializadorEscena : MonoBehaviour
     {
         // Aquí puedes inicializar tus objetos y cámaras.
         // Por ejemplo, asegúrate de que la cámara esté activa:
+        Time.timeScale = 1f;
         Camera camara = Camera.main;
         if (camara != null)
         {

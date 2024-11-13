@@ -66,7 +66,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel 2/Pasillo.unity
     guid: 62c9698c6664cf74fb88e38d3dbd8c34
   - enabled: 1
-    path: Assets/Scenes/Nivel3/CuartoComputoAlex.unity
+    path: Assets/Scenes/Nivel 3/CuartoComputoAlex.unity
     guid: f0d046dedc8f2924199403e85907d690
   - enabled: 1
     path: Assets/Scenes/Nivel 2/Tienda.unity
@@ -87,16 +87,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel 2/Mapa Ciudad NV2 Cubrebocas.unity
     guid: 90ecddcaf9d29344b82efc90e033e5c0
   - enabled: 1
-    path: Assets/Scenes/Nivel3/PasilloCasaAlex.unity
+    path: Assets/Scenes/Nivel 3/PasilloCasaAlex.unity
     guid: 9e5d005c789aa714a9e785ca938fb830
   - enabled: 1
     path: Assets/Scenes/Nivel 4/CuartoTioAlex.unity
     guid: 327c2bbb73009854093705cf7a654fe5
   - enabled: 1
-    path: Assets/Scenes/Nivel3/CuartoMamaAlex.unity
+    path: Assets/Scenes/Nivel 3/CuartoMamaAlex.unity
     guid: a85297d5525b5004184d3a0a977f6427
   - enabled: 1
-    path: Assets/Scenes/Nivel3/CocinaAlex.unity
+    path: Assets/Scenes/Nivel 3/CocinaAlex.unity
     guid: b74cebade708aa84e9c7f913a2b7e4af
   - enabled: 1
     path: Assets/Scenes/Nivel 4/TallerMecanico.unity
@@ -131,4 +131,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel 5/Tetris.unity
     guid: ac37182238186134281c38595db25975
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1/Salon de Clases Final.unity
+    guid: 84410d8b6726c034e9a481b7c0bae0c9
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1/Rompecabezas/Menu sin boton.unity
+    guid: 283ab02c1a648c545917450daa7b3738
+  - enabled: 1
+    path: Assets/Scenes/Nivel 2/Local 2 final.unity
+    guid: b477623e026673e4b99133e6749ee6f5
+  - enabled: 1
+    path: Assets/Scenes/Nivel 2/Pasillo final.unity
+    guid: 2e67a09adeeb3d946a601c08e5047fb9
   m_configObjects: {}

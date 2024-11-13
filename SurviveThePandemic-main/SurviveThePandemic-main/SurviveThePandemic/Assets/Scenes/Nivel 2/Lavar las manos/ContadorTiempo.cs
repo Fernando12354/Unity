@@ -1,27 +1,23 @@
 using UnityEngine;
-using TMPro; // Importar TextMesh Pro
+using TMPro; 
 using UnityEngine.SceneManagement;
-using System.Collections;
-
 
 public class ContadorTiempo : MonoBehaviour
 {
     public float tiempoLimite = 60f;
-    public TMP_Text textoTiempo; // Cambiar a TMP_Text para usar TextMesh Pro
+    public TMP_Text textoTiempo;
     public GameObject pantallaVictoria;
     public GameObject pantallaDerrota;
     public GameObject juego;
-    public int cantidadMaximaBurbujas = 10; // Número de burbujas necesarias para ganar
-    public string nombreSiguienteEscena; // Escena que se cambiará al ganar, ajustable desde el inspector
+    public int cantidadMaximaBurbujas = 10;
+    public string nombreSiguienteEscena;
 
-    private GenerarBurbujas generadorBurbujas; // Referencia al script de generación de burbujas
+    private int burbujasInstanciadas = 0;
+    private GenerarBurbujas generadorBurbujas;
 
     void Start()
     {
-        // Obtener la referencia al script GeneradorBurbujas
         generadorBurbujas = FindObjectOfType<GenerarBurbujas>();
-
-        // Mantener las pantallas de victoria y derrota desactivadas al iniciar el juego
         pantallaVictoria.SetActive(false);
         pantallaDerrota.SetActive(false);
         juego.SetActive(true);
@@ -29,59 +25,62 @@ public class ContadorTiempo : MonoBehaviour
 
     void Update()
     {
-        // Actualizar el tiempo
         tiempoLimite -= Time.deltaTime;
-        textoTiempo.text = "Tiempo: " + Mathf.Round(tiempoLimite).ToString(); // Actualiza el texto con TextMesh Pro
+        textoTiempo.text = "Tiempo: " + Mathf.Round(tiempoLimite).ToString();
 
-        // Verificar si se acabó el tiempo
         if (tiempoLimite <= 0)
         {
-            // Si el tiempo se acaba y no se ha alcanzado el número necesario de burbujas, perder
-            if (generadorBurbujas.burbujasInstanciadas < cantidadMaximaBurbujas) 
+            if (burbujasInstanciadas < cantidadMaximaBurbujas)
             {
                 Perder();
             }
         }
-        else if (generadorBurbujas.burbujasInstanciadas >= cantidadMaximaBurbujas)
+        else if (burbujasInstanciadas >= cantidadMaximaBurbujas)
         {
-            // Si se alcanzan las burbujas necesarias antes de que se acabe el tiempo, ganar
             Ganar();
+        }
+
+        // Lógica de creación de burbuja con clic izquierdo
+        if (Input.GetMouseButtonDown(0) && generadorBurbujas.EstaSobreLasManos())
+        {
+            generadorBurbujas.CrearBurbuja();
+            burbujasInstanciadas++;
+            Debug.Log("Burbujas instanciadas: " + burbujasInstanciadas);
         }
     }
 
     void Ganar()
     {
+        Time.timeScale = 0f;
         pantallaVictoria.SetActive(true);
         juego.SetActive(false);
-        Time.timeScale = 0f; // Pausa el juego
+      
     }
 
     void Perder()
     {
         pantallaDerrota.SetActive(true);
         juego.SetActive(false);
-        Time.timeScale = 0f; // Pausa el juego
+        Time.timeScale = 0f;
     }
 
-    // Función para reiniciar el juego, asignable desde el botón en el Inspector
     public void Reiniciar()
     {
-        Time.timeScale = 1f; // Restablece el tiempo
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reinicia la escena actual
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-   public void Continuar()
-{
-    if (!string.IsNullOrEmpty(nombreSiguienteEscena))
+    public void Continuar()
     {
-        Time.timeScale = 1f; // Restablece el tiempo antes de cargar la nueva escena
-        SceneManager.LoadScene(nombreSiguienteEscena); // Cambia a la siguiente escena
+        Time.timeScale = 1f;
+        if (!string.IsNullOrEmpty(nombreSiguienteEscena))
+        {
+            
+            SceneManager.LoadScene(nombreSiguienteEscena);
+        }
+        else
+        {
+            Debug.LogWarning("El nombre de la siguiente escena no ha sido asignado.");
+        }
     }
-    else
-    {
-        Debug.LogWarning("El nombre de la siguiente escena no ha sido asignado.");
-    }
-}
-
-
 }

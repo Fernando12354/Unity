@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1254071684}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: ae2ad734e416ba345a835b854dd7f95c, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 77be8220d235a0942a73d99e90ff582f, type: 2}
 --- !u!1 &418885
 GameObject:
   m_ObjectHideFlags: 0
@@ -7498,7 +7498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b3b6afe7f037fd4bb646fe0ae18341c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 51.52
+      value: 5.81
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b3b6afe7f037fd4bb646fe0ae18341c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11443,7 +11443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6822948312560163701, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
       propertyPath: m_RootOrder
-      value: 460
+      value: 461
       objectReference: {fileID: 0}
     - target: {fileID: 6822948312560163701, guid: ac1fe4f2e31fb174296faaa93d789524, type: 3}
       propertyPath: m_LocalScale.x
@@ -70573,23 +70573,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bab201fe655f744a85fcc35c306c2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalCoinsRequired: 1
+  totalCoinsRequired: 10
   coinText: {fileID: 1880882482}
   sceneToLoad: Scena Escuela
   specialObject: {fileID: 1254459852}
---- !u!65 &1055484718
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055484716}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.04400001, y: 0.046, z: 0.186}
-  m_Center: {x: 0.0012331711, y: 0.0065257996, z: -0.0074461}
 --- !u!1001 &1057947370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86486,6 +86473,59 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1383525416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1383525419}
+  - component: {fileID: 1383525418}
+  - component: {fileID: 1383525417}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1383525417
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383525416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1383525418
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383525416}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1383525419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383525416}
+  m_LocalRotation: {x: 0.00000008146018, y: 0.9999913, z: -1.5691641e-10, w: -0.004175944}
+  m_LocalPosition: {x: 48.33, y: 1.26, z: 44.74}
+  m_LocalScale: {x: 3, y: 2, z: 9}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 460
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1386752849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127652,7 +127692,7 @@ PrefabInstance:
     - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
       propertyPath: parrafos.Array.data[1]
       value: Esta es tu barra de vida, representa el riesgo que existe de que contagies
-        a alguien. Si llega a 0 significa que ya se contagio alguien.
+        a alguien. Si llega a 100 significa que ya se contagio alguien.
       objectReference: {fileID: 0}
     - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
       propertyPath: parrafos.Array.data[2]
@@ -163369,7 +163409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b3b6afe7f037fd4bb646fe0ae18341c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.58
+      value: 71.45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b3b6afe7f037fd4bb646fe0ae18341c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -163377,7 +163417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b3b6afe7f037fd4bb646fe0ae18341c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.01
+      value: 22.94
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b3b6afe7f037fd4bb646fe0ae18341c, type: 3}
       propertyPath: m_LocalRotation.w
