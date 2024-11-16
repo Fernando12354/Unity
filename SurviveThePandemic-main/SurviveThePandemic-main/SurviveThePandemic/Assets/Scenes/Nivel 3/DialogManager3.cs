@@ -20,6 +20,8 @@ public class DialogManager3 : MonoBehaviour
     private int currentDialogIndex = -1;
     private bool isDialogActive = false;
 
+    public MessageManager messageManager; // Referencia al script MessageManager
+
     private Vector2 originalResolution = new Vector2(1920, 1080); // Resolución original
     private Vector2 dialogResolution = new Vector2(3840, 2160); // Resolución para los diálogos
 
@@ -116,6 +118,16 @@ public class DialogManager3 : MonoBehaviour
         ahorcado.SetActive(false);
         escenario.SetActive(true);
         Time.timeScale = 1f;
+
+        if(messageManager!=null){
+
+            // Activa el GameObject asociado al MessageManager
+         messageManager.gameObject.SetActive(true);
+
+         // Asegura que el componente está habilitado
+         messageManager.enabled = true;
+
+        }
     }
 
     // Función para cambiar la resolución

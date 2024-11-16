@@ -147,7 +147,7 @@ public class MainScript : MonoBehaviour
     public Sprite WinSprite, LoseSprite;
 
     public GameObject MainDialogue, FinalDialogue, Escenario, Ahorcado;
-    public MessageManager messageManager; // Referencia al script MessageManager
+    //public MessageManager messageManager; // Referencia al script MessageManager
     
     // Nuevos botones
     public Button WinButton1, WinButton2, LoseButton;
@@ -172,7 +172,7 @@ public class MainScript : MonoBehaviour
         LoseButton.gameObject.SetActive(false);
 
         // Asegura que MessageManager esté desactivado al inicio
-        messageManager.gameObject.SetActive(false);
+        //messageManager.gameObject.SetActive(false);
     }
 
     public void OnRestartClicked()
@@ -189,7 +189,7 @@ public class MainScript : MonoBehaviour
         LoseButton.gameObject.SetActive(false);
         
         // Asegura que MessageManager esté desactivado al reiniciar
-        messageManager.gameObject.SetActive(false);
+        //messageManager.gameObject.SetActive(false);
     }
 
     public void OnGuessSubmitted(Button button)
@@ -227,7 +227,7 @@ public class MainScript : MonoBehaviour
         Escenario.SetActive(true);
 
         // Activa MessageManager
-        messageManager.gameObject.SetActive(true);
+        //messageManager.gameObject.SetActive(true);
     }
 
     private void PickRandomQuestion()

@@ -122,7 +122,17 @@ public class DialogManager4 : MonoBehaviour
         // Cargar la siguiente escena al presionar Enter cuando el Canvas de misión esté activo
         if (!isDialogActive && canvasMision.activeSelf && Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene(escenaSiguiente);
+            //SceneManager.LoadScene(escenaSiguiente);
+            StartCoroutine(WaitAndLoadScene(5f)); 
         }
+    }
+
+     private IEnumerator WaitAndLoadScene(float waitTime)
+    {
+        // Espera 5 segundos
+        yield return new WaitForSeconds(waitTime);
+
+       
+        SceneManager.LoadScene(escenaSiguiente);
     }
 }

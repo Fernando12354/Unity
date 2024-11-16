@@ -9020,7 +9020,6 @@ MonoBehaviour:
   FinalDialogue: {fileID: 2058277438}
   Escenario: {fileID: 1824383397}
   Ahorcado: {fileID: 976314827}
-  messageManager: {fileID: 1578303318}
   WinButton1: {fileID: 1785249633}
   WinButton2: {fileID: 805048618}
   LoseButton: {fileID: 805048618}
@@ -14505,7 +14504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1578303318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14521,9 +14520,19 @@ MonoBehaviour:
   messageText: {fileID: 274553481}
   messageImage: {fileID: 161001110}
   messages:
-  - message: Prueba
+  - message: " \xA1Vaya! Esa clase me hizo ver lo importante que es desinfectar superficies
+      para prevenir el COVID"
     image: {fileID: 21300000, guid: ebdc856ac09d29d4bb0fe4788ccfbd25, type: 3}
-    displayDuration: 2
+    displayDuration: 5
+    delayBeforeShowing: 1
+  - message: "\xA1Oh, no! Mi mam\xE1 trajo cosas de la calle y no sabe que es importante
+      limpiar las superficies. \xA1Debo hacer algo al respecto!       "
+    image: {fileID: 21300000, guid: ebdc856ac09d29d4bb0fe4788ccfbd25, type: 3}
+    displayDuration: 5
+    delayBeforeShowing: 1
+  - message: "Sal por la puerta y dir\xEDgete a la cocina"
+    image: {fileID: 21300000, guid: 97cbeb1343ce688478002ad59f3ce02b, type: 3}
+    displayDuration: 3
     delayBeforeShowing: 1
 --- !u!4 &1578303319
 Transform:
@@ -20286,6 +20295,7 @@ MonoBehaviour:
   - "Maestra: Bueno chicos Ahora ya que saben esto vamos a jugar un peque\xF1o juego
     para ver si aprendieron correctamente todo, el juego sera el ahorcado, estan
     listos, vamos!!"
+  messageManager: {fileID: 1578303318}
 --- !u!1 &2058277438
 GameObject:
   m_ObjectHideFlags: 0
