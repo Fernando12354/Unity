@@ -2,26 +2,15 @@ using UnityEngine;
 
 public class CleanableObject : MonoBehaviour
 {
-    public GameTimer gameTimer; // Referencia al GameTimer
+    public GameTimer gameTimer; // Referencia al script GameTimer
 
-    void Start()
+    private void OnMouseDown()
     {
-        if (gameTimer == null)
-        {
-            // Intenta encontrar el GameTimer en la escena si no está asignado
-            gameTimer = FindObjectOfType<GameTimer>();
-        }
-    }
-
-    void OnMouseDown()
-    {
-        // Llama al método ObjectCleaned en GameTimer
+        // Llamar al método ObjectCleaned en GameTimer pasando este objeto (el objeto de suciedad)
         if (gameTimer != null)
         {
-            gameTimer.ObjectCleaned(); // Notificar que se ha limpiado un objeto
-            Destroy(gameObject); // Eliminar el objeto de suciedad
+            gameTimer.ObjectCleaned(gameObject); // Pasa el objeto de suciedad a la función
+            gameObject.SetActive(false); // Desactiva el objeto de suciedad después de limpiarlo
         }
     }
 }
-
-

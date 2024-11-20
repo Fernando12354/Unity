@@ -171,10 +171,12 @@ public class GameController : MonoBehaviour
     }
 
     public void Reintentar()
-    {
-        Time.timeScale = 1f; // Reanudar el juego antes de reiniciar
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+{
+    Time.timeScale = 1f; // Reanudar el juego antes de reiniciar
+    tiempoRestante = tiempoLimite; // Reiniciar el contador de tiempo
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Recargar la escena
+}
+
 
     public void Continuar()
     {
