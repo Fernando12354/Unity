@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class MinijuegoJeringa : MonoBehaviour
 {
@@ -11,11 +10,11 @@ public class MinijuegoJeringa : MonoBehaviour
     public GameObject canvasDerrota;           // Canvas de derrota
     public GameObject canvasJuego;             // Canvas del minijuego
     public GameObject escenario;               // Objeto del escenario principal
-    public Text contadorTexto;                  // Objeto de texto para el contador
+    public Text contadorTexto;                 // Objeto de texto para el contador
     public float tiempoLimite = 30f;           // Tiempo límite del minijuego
 
     private float tiempoRestante;
-    private bool enJuego = false; // Cambiado a false para que no inicie el juego al principio
+    private bool enJuego = false;              // Cambiado a false para que no inicie el juego al principio
 
     private void Start()
     {
@@ -67,18 +66,9 @@ public class MinijuegoJeringa : MonoBehaviour
         canvasJuego.SetActive(true); // Activar el canvas del minijuego
         Cursor.visible = false; // Ocultar el cursor del sistema
         SetJeringaCursor(); // Establecer el cursor de jeringa
+        tiempoRestante = tiempoLimite; // Restablecer el tiempo
+        contadorTexto.text = "Tiempo: " + Mathf.CeilToInt(tiempoRestante).ToString();
     }
-    public void StartMinijuego()
-{
-    // Establecer el cursor de la jeringa
-    SetJeringaCursor();
-    
-    // Comenzar el tiempo
-    tiempoRestante = tiempoLimite;
-    enJuego = true; // Permitir que el minijuego comience
-    contadorTexto.text = "Tiempo: " + Mathf.CeilToInt(tiempoRestante).ToString(); // Mostrar el tiempo inicial
-}
-
 
     private bool EsClicEnMeta(Vector3 cursorPos)
     {
@@ -126,7 +116,21 @@ public class MinijuegoJeringa : MonoBehaviour
     // Método para el botón de Reiniciar (en ambos canvas)
     public void Reiniciar()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reinicia la escena actual
+        // Restablecer el tiempo
+        tiempoRestante = tiempoLimite;
+        contadorTexto.text = "Tiempo: " + Mathf.CeilToInt(tiempoRestante).ToString();
+
+        // Ocultar los canvas de victoria y derrota
+        canvasVictoria.SetActive(false);
+        canvasDerrota.SetActive(false);
+
+        // Reactivar el canvas del minijuego
+        canvasJuego.SetActive(true);
+
+        // Configurar el cursor de jeringa
+        SetJeringaCursor();
+
+        enJuego = true; // Reiniciar el estado del juego
     }
 
     // Función para establecer el cursor como la jeringa

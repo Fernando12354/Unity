@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 292176781}
   m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 7a9aa06e1aa1cd544a52483118c2ca2d, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1600,11 +1600,15 @@ MonoBehaviour:
   timerText: {fileID: 1823350533}
   winCanvas: {fileID: 1744804648}
   loseCanvas: {fileID: 902724144}
-  nextSceneName: PasilloCasaAlex
+  juego: {fileID: 0}
+  escenario: {fileID: 0}
   spongeCursor: {fileID: 2800000, guid: 0187c1cda877d0e42935961454e275da, type: 3}
   defaultCursor: {fileID: 0}
+  dirtObjects: []
   sortingOrderOnWin: 10
   sortingOrderOnLose: 10
+  escenarioTrigger: {fileID: 0}
+  gameEnded: 0
 --- !u!1 &1637190296
 GameObject:
   m_ObjectHideFlags: 0

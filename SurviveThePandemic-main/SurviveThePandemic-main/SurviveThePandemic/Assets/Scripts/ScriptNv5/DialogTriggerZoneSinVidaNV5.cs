@@ -73,7 +73,7 @@ public class DialogTriggerZoneSinVidaNV5 : MonoBehaviour
 
         if (minijuegoScript != null)
         {
-            minijuegoScript.StartMinijuego(); // Inicia el minijuego y comienza el tiempo
+            minijuegoScript.IniciarMinijuego(); // Inicia el minijuego y comienza el tiempo
         }
 
         if (ZonaDeDialogosPost != null)
