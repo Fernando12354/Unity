@@ -18,6 +18,7 @@ public class SequentialCanvasController : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         canvasNombreMision4.SetActive(true);
         canvasDialogosNoticieros.SetActive(false);
         canvasCall.SetActive(true);

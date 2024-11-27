@@ -11,6 +11,7 @@ public class DisplayMessage : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         // Asigna el mensaje recibido desde el Inspector.
         messageText.text = messageToShow;
 

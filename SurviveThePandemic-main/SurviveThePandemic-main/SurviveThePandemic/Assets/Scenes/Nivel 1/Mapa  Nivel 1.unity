@@ -44834,7 +44834,8 @@ MonoBehaviour:
   AudioCoin: {fileID: 602837769}
   take_sound: {fileID: 8300000, guid: fdb9a4513397c704b9d2a1202b7693be, type: 3}
   contenedorTexto: {fileID: 1880882482}
-  Player: {fileID: 2008239319}
+  PlayerNormal: {fileID: 2008239319}
+  PlayerCubrebocas: {fileID: 0}
   NextCoin: {fileID: 957420269}
 --- !u!95 &602837768
 Animator:
@@ -48034,7 +48035,8 @@ MonoBehaviour:
   AudioCoin: {fileID: 707485455}
   take_sound: {fileID: 8300000, guid: fdb9a4513397c704b9d2a1202b7693be, type: 3}
   contenedorTexto: {fileID: 1880882482}
-  Player: {fileID: 2008239319}
+  PlayerNormal: {fileID: 2008239319}
+  PlayerCubrebocas: {fileID: 0}
   NextCoin: {fileID: 1373527282}
 --- !u!95 &707485454
 Animator:
@@ -89222,7 +89224,8 @@ MonoBehaviour:
   AudioCoin: {fileID: 1440739390}
   take_sound: {fileID: 8300000, guid: fdb9a4513397c704b9d2a1202b7693be, type: 3}
   contenedorTexto: {fileID: 1880882482}
-  Player: {fileID: 2008239319}
+  PlayerNormal: {fileID: 2008239319}
+  PlayerCubrebocas: {fileID: 0}
   NextCoin: {fileID: 1351035568}
 --- !u!95 &1440739389
 Animator:
@@ -90342,7 +90345,8 @@ MonoBehaviour:
   AudioCoin: {fileID: 1455621791}
   take_sound: {fileID: 8300000, guid: fdb9a4513397c704b9d2a1202b7693be, type: 3}
   contenedorTexto: {fileID: 1880882482}
-  Player: {fileID: 2008239319}
+  PlayerNormal: {fileID: 2008239319}
+  PlayerCubrebocas: {fileID: 0}
   NextCoin: {fileID: 1254459852}
 --- !u!95 &1455621790
 Animator:
@@ -91014,7 +91018,8 @@ MonoBehaviour:
   AudioCoin: {fileID: 1473387079}
   take_sound: {fileID: 8300000, guid: fdb9a4513397c704b9d2a1202b7693be, type: 3}
   contenedorTexto: {fileID: 1880882482}
-  Player: {fileID: 2008239319}
+  PlayerNormal: {fileID: 2008239319}
+  PlayerCubrebocas: {fileID: 0}
   NextCoin: {fileID: 1791236031}
 --- !u!95 &1473387078
 Animator:
@@ -95971,7 +95976,8 @@ MonoBehaviour:
   AudioCoin: {fileID: 1478894297}
   take_sound: {fileID: 8300000, guid: fdb9a4513397c704b9d2a1202b7693be, type: 3}
   contenedorTexto: {fileID: 1880882482}
-  Player: {fileID: 2008239319}
+  PlayerNormal: {fileID: 2008239319}
+  PlayerCubrebocas: {fileID: 0}
   NextCoin: {fileID: 1549645314}
 --- !u!95 &1478894296
 Animator:
@@ -126804,7 +126810,8 @@ MonoBehaviour:
   AudioCoin: {fileID: 1658423107}
   take_sound: {fileID: 8300000, guid: fdb9a4513397c704b9d2a1202b7693be, type: 3}
   contenedorTexto: {fileID: 1880882482}
-  Player: {fileID: 2008239319}
+  PlayerNormal: {fileID: 2008239319}
+  PlayerCubrebocas: {fileID: 0}
   NextCoin: {fileID: 707485450}
 --- !u!95 &1658423106
 Animator:
@@ -129305,7 +129312,8 @@ MonoBehaviour:
   AudioCoin: {fileID: 1717327649}
   take_sound: {fileID: 8300000, guid: fdb9a4513397c704b9d2a1202b7693be, type: 3}
   contenedorTexto: {fileID: 1880882482}
-  Player: {fileID: 2008239319}
+  PlayerNormal: {fileID: 2008239319}
+  PlayerCubrebocas: {fileID: 0}
   NextCoin: {fileID: 208920558}
 --- !u!95 &1717327648
 Animator:
@@ -161542,7 +161550,8 @@ MonoBehaviour:
   AudioCoin: {fileID: 2050271036}
   take_sound: {fileID: 8300000, guid: fdb9a4513397c704b9d2a1202b7693be, type: 3}
   contenedorTexto: {fileID: 1880882482}
-  Player: {fileID: 2008239319}
+  PlayerNormal: {fileID: 2008239319}
+  PlayerCubrebocas: {fileID: 0}
   NextCoin: {fileID: 1658423102}
 --- !u!95 &2050271035
 Animator:
@@ -163638,7 +163647,8 @@ MonoBehaviour:
   AudioCoin: {fileID: 2111734427}
   take_sound: {fileID: 8300000, guid: fdb9a4513397c704b9d2a1202b7693be, type: 3}
   contenedorTexto: {fileID: 1880882482}
-  Player: {fileID: 2008239319}
+  PlayerNormal: {fileID: 2008239319}
+  PlayerCubrebocas: {fileID: 0}
   NextCoin: {fileID: 2050271031}
 --- !u!1001 &2116685347
 PrefabInstance:

@@ -34,6 +34,7 @@ public class Objetivos : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         contenedorInstrucciones.SetActive(false);  
         textoMision.text = objetivos[numObjetivos].texto;
     }

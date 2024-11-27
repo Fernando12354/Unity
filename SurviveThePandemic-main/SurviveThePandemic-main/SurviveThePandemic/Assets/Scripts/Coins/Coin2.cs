@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-public class Coin : MonoBehaviour
+public class Coin2 : MonoBehaviour
 {
     [Header("Coin")]
     public GameObject ContenedorPadre;
@@ -11,7 +11,6 @@ public class Coin : MonoBehaviour
     public TextMeshProUGUI contenedorTexto;
     public GameObject PlayerNormal;           // Referencia al jugador normal
     public GameObject PlayerCubrebocas;       // Referencia al jugador con cubrebocas
-    private CountCoins coins_reference;
 
     [Header("Next Coin")]
     public GameObject NextCoin;
@@ -19,18 +18,18 @@ public class Coin : MonoBehaviour
     private bool coin_working = false;
     private GameObject currentPlayer;         // Jugador actual activo
 
+    // Contador universal de monedas
+    private static int totalCoins = 0;
+
     void Start()
     {
         // Inicializamos el jugador actual como el normal
         currentPlayer = PlayerNormal;
-
-        // Configuramos referencias iniciales
-        UpdatePlayerReferences();
     }
 
     void Update()
     {
-        // Detectamos si el jugador ha cambiado y actualizamos referencias
+        // Detectamos si el jugador ha cambiado y actualizamos el jugador actual
         if (PlayerNormal.activeSelf)
         {
             currentPlayer = PlayerNormal;
@@ -40,16 +39,8 @@ public class Coin : MonoBehaviour
             currentPlayer = PlayerCubrebocas;
         }
 
-        UpdatePlayerReferences();
-    }
-
-    private void UpdatePlayerReferences()
-    {
-        // Actualizamos referencias a los componentes necesarios
-        if (currentPlayer != null)
-        {
-            coins_reference = currentPlayer.GetComponent<CountCoins>();
-        }
+        // Actualizamos el texto con el contador de monedas
+        contenedorTexto.text = " " + totalCoins;
     }
 
     private IEnumerator OnTriggerStay(Collider other)
@@ -63,14 +54,15 @@ public class Coin : MonoBehaviour
             AudioCoin.clip = take_sound;
             AudioCoin.Play(0);
 
-            if (coins_reference != null)
-            {
-                coins_reference.Coins++; // Incrementar el contador de monedas
-                contenedorTexto.text = "Monedas: " + coins_reference.Coins; // Actualizar texto en pantalla
-            }
+            // Incrementar el contador de monedas universal
+            totalCoins++;
+
+            // Actualizar el texto inmediatamente después de recoger una moneda
+            contenedorTexto.text = " " + totalCoins;
 
             yield return new WaitForSeconds(0.8f);
             ContenedorPadre.SetActive(false); // Desactivar la moneda
         }
     }
 }
+

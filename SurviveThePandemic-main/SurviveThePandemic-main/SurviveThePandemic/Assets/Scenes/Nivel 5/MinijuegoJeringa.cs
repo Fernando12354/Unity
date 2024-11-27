@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class MinijuegoJeringa : MonoBehaviour
 {
     public Texture2D jeringaCursor;           // Imagen del cursor con la jeringa
-    public Texture2D defaultCursor;            // Cursor predeterminado para cuando gane o pierda
     public GameObject puntoMeta;               // Objeto de la meta
     public GameObject canvasVictoria;          // Canvas de victoria
     public GameObject canvasDerrota;           // Canvas de derrota
@@ -23,16 +22,13 @@ public class MinijuegoJeringa : MonoBehaviour
         canvasVictoria.SetActive(false);
         canvasDerrota.SetActive(false);
         Cursor.visible = true; // Mostrar el cursor del sistema
-        Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto); // Establecer cursor por defecto
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto); // Asegurar el cursor del sistema por defecto
     }
 
     private void Update()
     {
         if (enJuego)
         {
-            // Seguir el cursor con la imagen de la jeringa
-            Vector3 cursorPos = Input.mousePosition;
-
             // Actualizar y mostrar el tiempo restante
             tiempoRestante -= Time.deltaTime;
             contadorTexto.text = "Tiempo: " + Mathf.CeilToInt(tiempoRestante).ToString();
@@ -47,7 +43,7 @@ public class MinijuegoJeringa : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 // Revisar si hace clic en el punto meta
-                if (EsClicEnMeta(cursorPos))
+                if (EsClicEnMeta(Input.mousePosition))
                 {
                     TerminarMinijuego(true); // Victoria
                 }
@@ -92,8 +88,8 @@ public class MinijuegoJeringa : MonoBehaviour
         Cursor.visible = true; // Mostrar el cursor del sistema
         canvasJuego.SetActive(false); // Ocultar el canvas del minijuego
 
-        // Cambiar el cursor al predeterminado
-        Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto);
+        // Restablecer el cursor del sistema
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 
         if (gano)
         {

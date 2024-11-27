@@ -19341,7 +19341,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jeringaCursor: {fileID: 2800000, guid: c7cb660910f596149a9e50cb5a8c9ad2, type: 3}
-  defaultCursor: {fileID: 0}
   puntoMeta: {fileID: 1999993383}
   canvasVictoria: {fileID: 1887206482}
   canvasDerrota: {fileID: 2092173274}
