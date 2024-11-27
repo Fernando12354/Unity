@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1978089145}
-  m_IndirectSpecularColor: {r: 0.43759406, g: 0.48544687, b: 0.5657226, a: 1}
+  m_IndirectSpecularColor: {r: 0.43759355, g: 0.48544604, b: 0.5657218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8832,6 +8832,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.600002, y: 10, z: 9.800002}
   m_Center: {x: -6.8000016, y: 7, z: -5.300001}
+--- !u!1 &545657552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4933713831897562793, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+  m_PrefabInstance: {fileID: 1735863562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &548355415
 GameObject:
   m_ObjectHideFlags: 0
@@ -32560,6 +32565,167 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &1735863562
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_RootOrder
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562793, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_Name
+      value: Tuto
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562793, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832616094532, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_text
+      value: Buena Suerte!!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832616094532, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+    - target: {fileID: 4933713832616094532, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: velParrafo
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: spriteFinal
+      value: 
+      objectReference: {fileID: 21300000, guid: c79d12a8d2cb67f4c979f6fc4a52ea8d, type: 3}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: mensajeFinal
+      value: "\xA1Buena Suerte!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: componenteCompleto
+      value: 
+      objectReference: {fileID: 545657552}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: parrafos.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: ayudaVisual.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: parrafos.Array.data[0]
+      value: "Es hora de dirigirte al hospital. Tu ayuda como voluntario marcar\xE1
+        la diferencia."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: parrafos.Array.data[1]
+      value: Necesitas un traje pero primero tienes que conseguir 10 tuercas como
+        esta para poder armar el traje
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: parrafos.Array.data[2]
+      value: Necesitas un traje pero primero tienes que conseguir 10 tuercas como
+        esta para poder armar el traje
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: parrafos.Array.data[5]
+      value: "Necesitas dinero para poder subir al autobus, encuentra las 10 monedas
+        que est\xE1n en tu vecindario."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: parrafos.Array.data[6]
+      value: Bienvenido a Wpandemic-19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: parrafos.Array.data[7]
+      value: "Sobrevive a la pandemia \xA1\xA1Mucha suerte!!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: ayudaVisual.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 65d68a9cc7cf13546a9223e96a4d905a, type: 3}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: ayudaVisual.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 08dd867974b3928448c123932d8643dd, type: 3}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: ayudaVisual.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 548d955394c9f284f855a5d699ba1261, type: 3}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: ayudaVisual.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 30720f3372151ed45820bbd189e371c6, type: 3}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: ayudaVisual.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: a4b89fad85b334b4c9ed91760f96096d, type: 3}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: ayudaVisual.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: c79d12a8d2cb67f4c979f6fc4a52ea8d, type: 3}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: ayudaVisual.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: c79d12a8d2cb67f4c979f6fc4a52ea8d, type: 3}
+    - target: {fileID: 4933713832989135605, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -10.327637
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135605, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -288.14636
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
 --- !u!1 &1739731556
 GameObject:
   m_ObjectHideFlags: 0

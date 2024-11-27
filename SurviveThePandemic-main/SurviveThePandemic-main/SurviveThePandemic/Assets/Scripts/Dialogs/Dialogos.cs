@@ -112,7 +112,6 @@ public class Dialogos : MonoBehaviour
     }
 }
 */
-
 using TMPro;
 using System.Collections;
 using UnityEngine;
@@ -143,8 +142,14 @@ public class Dialogos : MonoBehaviour
 
     private Coroutine currentCoroutine;
 
+    // Nueva bandera
+    private bool dialogosCompletados = false;
+
     void Start()
     {
+        // Congelar la escena desde el inicio
+        Time.timeScale = 0;
+
         botonContinue.SetActive(false);
         botonQuitar.SetActive(false);
         botonLeer.SetActive(true);
@@ -159,11 +164,14 @@ public class Dialogos : MonoBehaviour
         {
             botonContinue.SetActive(true);
         }
+
         if (Input.GetKeyDown(KeyCode.C))
         {
             siguienteParrafo();
         }
-        if (Input.GetKeyDown(KeyCode.S))
+
+        // Solo permitir usar S cuando los diálogos hayan terminado
+        if (Input.GetKeyDown(KeyCode.S) && dialogosCompletados)
         {
             botonCerrar();
         }
@@ -178,18 +186,14 @@ public class Dialogos : MonoBehaviour
             yield break;
         }
 
-        Debug.Log($"Mostrando párrafo {index}: {parrafos[index]}");
-
-        textD.text = "";  // Reiniciar el texto antes de empezar a mostrarlo
+        textD.text = ""; // Reiniciar el texto antes de empezar a mostrarlo
         buttonChange.image.sprite = ayudaVisual[index];
 
         foreach (char letra in parrafos[index].ToCharArray())
         {
             textD.text += letra;
-            yield return new WaitForSeconds(velParrafo);
+            yield return new WaitForSecondsRealtime(velParrafo); // Usar tiempo real
         }
-
-        Debug.Log("Texto completo mostrado");
     }
 
     public void siguienteParrafo()
@@ -220,6 +224,9 @@ public class Dialogos : MonoBehaviour
         // Desactivar el botón "Continuar" y activar el botón "Quitar" al final
         botonContinue.SetActive(false);
         botonQuitar.SetActive(true);
+
+        // Activar la bandera de finalización
+        dialogosCompletados = true;
     }
 
     public void activarBotonLeer()
@@ -234,10 +241,14 @@ public class Dialogos : MonoBehaviour
 
     public void botonCerrar()
     {
+        // Reanudar la escena
+        Time.timeScale = 1;
+
         panelDialogo.SetActive(false);
         botonLeer.SetActive(false);
         canvasGuia.SetActive(true);
     }
 }
+
 
 

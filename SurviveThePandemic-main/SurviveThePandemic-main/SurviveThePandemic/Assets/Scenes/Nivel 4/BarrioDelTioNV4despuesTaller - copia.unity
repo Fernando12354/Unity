@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1978089145}
-  m_IndirectSpecularColor: {r: 0.43759406, g: 0.48544687, b: 0.5657226, a: 1}
+  m_IndirectSpecularColor: {r: 0.43759355, g: 0.48544604, b: 0.5657218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20897,7 +20897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1198457634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27597,6 +27597,154 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.000001, y: 0.2, z: 4.000001}
   m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!1001 &1489021946
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_RootOrder
+      value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562792, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562793, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_Name
+      value: Tuto (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713831897562793, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832616094532, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_text
+      value: Buena Suerte!!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832616094532, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+    - target: {fileID: 4933713832616094532, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: velParrafo
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: spriteFinal
+      value: 
+      objectReference: {fileID: 21300000, guid: c79d12a8d2cb67f4c979f6fc4a52ea8d, type: 3}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: mensajeFinal
+      value: "\xA1Buena Suerte!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: componenteCompleto
+      value: 
+      objectReference: {fileID: 2048440948}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: parrafos.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: ayudaVisual.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: parrafos.Array.data[0]
+      value: "Ahora que estas en el exterior debes tomar ciertas medidas para no
+        contagiar a los dem\xE1s."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: parrafos.Array.data[1]
+      value: Esta es tu barra de vida, representa el riesgo que existe de que contagies
+        a alguien. Si llega a 100 significa que ya se contagio alguien.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: parrafos.Array.data[2]
+      value: "En la calle hay muchas personas por lo que deber\xE1s mantener tu distancia."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: parrafos.Array.data[5]
+      value: "Necesitas dinero para poder subir al autobus, encuentra las 10 monedas
+        que est\xE1n en tu vecindario."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: parrafos.Array.data[6]
+      value: Bienvenido a Wpandemic-19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: parrafos.Array.data[7]
+      value: "Sobrevive a la pandemia \xA1\xA1Mucha suerte!!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: ayudaVisual.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 30720f3372151ed45820bbd189e371c6, type: 3}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: ayudaVisual.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: a4b89fad85b334b4c9ed91760f96096d, type: 3}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: ayudaVisual.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: c79d12a8d2cb67f4c979f6fc4a52ea8d, type: 3}
+    - target: {fileID: 4933713832989135604, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: ayudaVisual.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: c79d12a8d2cb67f4c979f6fc4a52ea8d, type: 3}
+    - target: {fileID: 4933713832989135605, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -10.327637
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933713832989135605, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -288.14636
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
 --- !u!1001 &1504538029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36216,6 +36364,11 @@ RectTransform:
   m_AnchoredPosition: {x: -4.9999847, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2048440948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4933713831897562793, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
+  m_PrefabInstance: {fileID: 1489021946}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2050302655 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 25a8881eff0f1e64bb469a0e19dfd998, type: 3}
@@ -37616,7 +37769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4933713831897562793, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4933713832616094532, guid: 084d6b072799f8646929aea5a0af6455, type: 3}
       propertyPath: m_text
