@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1962979432}
-  m_IndirectSpecularColor: {r: 0.44931298, g: 0.49938458, b: 0.57570475, a: 1}
+  m_IndirectSpecularColor: {r: 0.44931334, g: 0.49938548, b: 0.5757061, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3202,6 +3202,123 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790298450}
   m_CullTransparentMesh: 1
+--- !u!1001 &816058694
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600266, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784293600279, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_Name
+      value: ListaPendientes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784538772482, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_Text
+      value: Acercate a la TV y despues ve a la puerta
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784538772482, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784538772482, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214784538772483, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434214785091694980, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dbf42256ec52d3044a153f4525c0912f, type: 3}
 --- !u!1 &941430304
 GameObject:
   m_ObjectHideFlags: 0
@@ -3970,7 +4087,7 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: ebdc856ac09d29d4bb0fe4788ccfbd25, type: 3}
     displayDuration: 5
     delayBeforeShowing: 6
-  - message: Enciende la TV.
+  - message: Acercate a la TV
     image: {fileID: 21300000, guid: 97cbeb1343ce688478002ad59f3ce02b, type: 3}
     displayDuration: 4
     delayBeforeShowing: 1

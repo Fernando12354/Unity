@@ -152,4 +152,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel 5/CuartoTioAlexNV5.unity
     guid: b03cf1a9ccb565248a8f13a2ed02fe1f
+  - enabled: 1
+    path: Assets/Scenes/Nivel 2/Pasillo local.unity
+    guid: 7ba881f14d055c44ea12135529c93585
+  - enabled: 1
+    path: Assets/Scenes/Nivel 2/Pasillo farmacia.unity
+    guid: 94cc31d789327b24e8c3b36274ffd460
   m_configObjects: {}
